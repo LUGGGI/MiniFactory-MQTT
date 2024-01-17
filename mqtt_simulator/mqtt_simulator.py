@@ -1,4 +1,9 @@
-'''Uses a prerecored mqtt message file to replay all the mqtt messages
+'''Uses a prerecorded mqtt message file to replay all the mqtt messages
+
+Howto:
+ - Only change values at bottom
+ - In MqttHandler set right broker and topic_start
+ - In LogReader set log to read and scaler (lower values sends the messages faster)
 '''
 
 __author__ = "Lukas Beck"
@@ -6,14 +11,13 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2024.01.16"
+__version__ = "2024.01.17"
 
 import csv
 import paho.mqtt.client as mqtt
 import logging
 from datetime import datetime
 from time import sleep
-import time
 
 
 
@@ -23,32 +27,29 @@ class MqttHandler():
     '''Handels Publishing to mqtt broker.
     '''
 
-    __BROKER_ADDR = "192.168.0.59"
+    
     __PORT = 1883
 
-    def __init__(self, topic_start: str) -> None:
+    def __init__(self, broker_addr: str, topic_start: str) -> None:
         '''Init MqttInterface.
         
         Args:
-            factory_name (str): Name of the factory (for example Right).
-            states (State): Possible States of line.
+            topic_start(str): string to parse to the beginning of the topic
         '''
-
-        self.__BROKER_ADDR = "test.mosquitto.org"
-
         self.topic_start = topic_start
 
         self.client = mqtt.Client()
 
-        self.client.connect(self.__BROKER_ADDR, self.__PORT)
+        self.client.connect(broker_addr, self.__PORT)
 
 
     def publish_msg(self, topic: str, msg: str):
         
-        self.client.publish(f"{self.topic_start}/{topic}")
+        self.client.publish(f"{self.topic_start}/{topic}", msg)
 
 
 class Logger():
+    '''Handles logging'''
     STD_LEVEL_CONSOLE = "WARNING"
     LEVEL_FILE = logging.INFO
 
@@ -84,13 +85,19 @@ class Logger():
 
 
 class LogReader():
-    def __init__(self, file: str, mqtt_handler: MqttHandler, log: logging.Logger) -> None:
-        self.mqtt_handler = mqtt_handler
-
+    '''Handles the reading an timing of the messages'''
+    def __init__(self, file: str, mqtt_handler: MqttHandler, log: logging.Logger, scaler=1.0) -> None:
+        '''Init LogReader.
+        
+        Args:
+            file(str): the log file to read
+            mqtt_handler: object to the mqtt_handler
+            log: object to Logger
+            scaler: value the scale the sending time, lover values send faster
+        '''
         log_file = open(file)
 
         start_time = datetime.now()
-        preveus_msg_time: datetime = None
         log_start_time:datetime = None
 
         log_reader = csv.reader(log_file, delimiter=';', skipinitialspace=True)
@@ -106,17 +113,21 @@ class LogReader():
             else:
                 
                 while (True):
-                    if (datetime.now() - start_time) > (row[0] - log_start_time):
+                    log_time_dif = (row[0] - log_start_time) * scaler
+                    current_time_dif = datetime.now() - start_time
+                    if current_time_dif > log_time_dif:
+                        mqtt_handler.publish_msg(row[2], row[3])
                         log.info(row)
                         break
                     else:
-                        print(f"{((datetime.now() - start_time) - (row[0] - log_start_time)).microseconds/1000000} : {(datetime.now() - start_time).microseconds/1000000}:  {(row[0] - log_start_time).microseconds/1000000}")
-                        sleep(((datetime.now() - start_time) - (row[0] - log_start_time)).microseconds/1000000)
-
-            
-
+                        # print(f"{(log_time_dif - current_time_dif).total_seconds()} : {current_time_dif.total_seconds()}:  {log_time_dif.total_seconds()}")
+                        sleep((log_time_dif - current_time_dif).total_seconds())
 
 if __name__ == "__main__":
+
+    # BROKER_ADDR = "192.168.0.59" #direct connection to the MiniFactory broker
+    BROKER_ADDR = "test.mosquitto.org" # test broker works everywhere
+
     logger = Logger()
-    mqtt_handler = MqttHandler("MiniFactory/Right/Factory")
-    LogReader("mqtt_simulator/mqtt4.log", mqtt_handler, logger.log)
+    mqtt_handler = MqttHandler(BROKER_ADDR, topic_start="MiniFactory/Right/Factory")
+    LogReader("mqtt_simulator/mqtt4.log", mqtt_handler, logger.log, scaler=1.0)
