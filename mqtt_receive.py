@@ -8,7 +8,7 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2023.12.06"
+__version__ = "2024.12.19"
 
 import json
 import paho.mqtt.client as mqtt
@@ -19,15 +19,13 @@ class Logger():
     STD_LEVEL_CONSOLE = "WARNING"
     LEVEL_FILE = logging.INFO
 
-    logging_dir = "mqtt_simulator"
-
 
     def __init__(self) -> None:
             
         self.log: logging.Logger = None
 
 
-        log_file_path = f"{self.logging_dir}/mqtt{listdir(self.logging_dir).__len__()+1}.log"
+        log_file_path = f"log_mqtt/mqtt{listdir('log_mqtt').__len__()+1}.log"
 
 
         log_formatter_file = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%H:%M:%S')
