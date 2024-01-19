@@ -1,7 +1,0 @@
-19:25:31.005; 0; Start of recording
-19:25:32.968; 1; LineConfig/Set; {'name': 'Init', 'run': True, 'start_at': 'INIT', 'end_at': 'END'}
-19:25:33.970; 2; LineConfig/Set; {'name': 'Main1', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_oven': True, 'with_saw': True, 'with_PM': False, 'with_WH': False, 'color': 'WHITE'}
-19:25:35.971; 3; LineConfig/Set; {'name': 'Main2', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_oven': False, 'with_saw': True, 'with_PM': True, 'with_WH': True, 'color': 'RED'}
-19:25:36.071; 4; LineConfig/Set; {'name': 'Main3', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_PM': False, 'with_WH': True, 'color': 'BLUE'}
-19:25:36.972; 5; LineConfig/Set; {'name': 'Main4', 'run': True, 'start_at': 'storage', 'end_at': 'END', 'color': 'RED'}
-19:25:38.005; 6; FactoryCommand/Set; {'run': True, 'stop': False}

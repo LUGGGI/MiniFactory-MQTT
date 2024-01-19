@@ -1,9 +1,12 @@
 '''Uses a prerecorded mqtt message file to replay all the mqtt messages
 
 Howto:
+ - call from MQTT directory not the mqtt_simulator directory
  - Only change values at bottom
+ - Set file in LogReader to wanted recording
+ - Set scaler in LogReader to play slower or faster(lower values sends the messages faster)
  - In MqttHandler set right broker and topic_start
- - In LogReader set log to read and scaler (lower values sends the messages faster)
+ - Call with py .\mqtt_simulator\mqtt_simulator.py under windows or equivalent in other systems
 '''
 
 __author__ = "Lukas Beck"
@@ -11,7 +14,7 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2024.01.17"
+__version__ = "2024.01.19"
 
 import csv
 import paho.mqtt.client as mqtt
@@ -130,4 +133,4 @@ if __name__ == "__main__":
 
     logger = Logger()
     mqtt_handler = MqttHandler(BROKER_ADDR, topic_start="MiniFactory/Right/Factory")
-    LogReader("mqtt_simulator/mqtt4.log", mqtt_handler, logger.log, scaler=1.0)
+    LogReader(file="mqtt_simulator/line1-4.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)
