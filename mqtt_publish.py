@@ -183,8 +183,8 @@ class MqttPublish():
         # time.sleep(1)
 
 
-        self.client.publish(self.topic_factory_config_set, json.dumps({"exit_if_end": True}))
-        print(f"{self.topic_factory_config_set.removeprefix(f'{self.topic_start}/')}")
+        # self.client.publish(self.topic_factory_config_set, json.dumps({"exit_if_end": True}))
+        # print(f"{self.topic_factory_config_set.removeprefix(f'{self.topic_start}/')}")
 
         # time.sleep(3)
 
