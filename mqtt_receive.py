@@ -25,7 +25,7 @@ class Logger():
         self.log: logging.Logger = None
 
 
-        log_file_path = f"log_mqtt/mqtt{listdir('log_mqtt').__len__()+1}.log"
+        log_file_path = f"mqtt_simulator/mqtt{listdir('mqtt_simulator').__len__()+1}.log"
 
 
         log_formatter_file = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%H:%M:%S')
@@ -38,7 +38,7 @@ class Logger():
 
         # Setup Stream Handler (i.e. console)
         stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(log_formatter_console)
+        stream_handler.setFormatter(log_formatter_file)
         stream_handler.setLevel(logging.DEBUG)
 
         # Get our logger
