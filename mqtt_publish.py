@@ -50,7 +50,6 @@ line_configs = [
         "start_at": "start",
         "end_at": "END",
         "with_PM": False,
-        "with_WH": True,
         "color": "BLUE"
     },
     {
@@ -83,9 +82,9 @@ wh_content = [
             "BLUE"
         ],
         [
-            "Carrier",
-            "Carrier",
-            "Carrier"
+            "Empty",
+            "Empty",
+            "Empty"
         ]
     ]
 
@@ -128,21 +127,26 @@ class MqttPublish():
 
     def publish_all(self):
         
+        
         self.client.publish(self.topic_wh_content_set, json.dumps(wh_content))
         print(f"{self.topic_wh_content_set.removeprefix(f'{self.topic_start}/')}")
 
         # self.client.publish(self.topic_line_config_set, json.dumps({
         #     "name": "Test",
         #     "run": True,
-        #     "start_at": "CB1",
-        #     "end_at": "CB1"
+        #     "start_at": "storage",
+        #     "end_at": "CB5",
+        #     "color": "RED"
         # }))
         # self.client.publish(self.topic_line_config_set, json.dumps({
-        #     "name": "LineE4", 
+        #     "name": "Line1", 
         #     "run": True,
-        #     "start_at": "CB1",
-        #     "end_at": "CB3",
+        #     "start_at": "start",
+        #     "end_at": "END",
+        #     "with_oven": False,
+        #     "with_saw": True,
         #     "with_PM": True,
+        #     "with_WH": True,
         #     "color": "WHITE"
         # }))
 
