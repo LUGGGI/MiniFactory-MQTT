@@ -204,7 +204,66 @@ class MqttPublish():
 
         print("End of publish all")
 
+
+    def publish_get(self) -> bool:
+        while True:
+            print("Publish program for the MiniFactory, enter the character for the corresponding option:")
+            print("c: get Line config")
+            print("l: get Line status")
+            print("w: get Warehouse content")
+            print("m: get Machine status")
+            print("s: show setter functions")
+            print("e: exit the publish program")
+            char = input("Enter the character: ").lower()[0]
+            self.client.connect(self.__BROKER_ADDR, self.__PORT)
+            if char == "c":
+                self.client.publish(self.topic_line_config_get)
+            elif char == "l":
+                self.client.publish(self.topic_line_status_get)
+            elif char == "w":
+                self.client.publish(self.topic_wh_content_get)
+            elif char == "m":
+                self.client.publish(self.topic_machine_status_get)
+            elif char == "s":
+                return False
+            elif char == "e":
+                return True
+
+    def publish_set(self):
+        while True:
+            print("Publish program for the MiniFactory, enter the character for the corresponding option:")
+            print("s: start factory (sends line_configs, wh_configs and start command)")
+            print("r: restart factory after PROBLEM occurred (sends a start command)")
+            print("x: stops the factory")
+            print("p: pauses the factory")
+            print("g: show getter functions")
+            print("e: exit the publish program")
+            char = input("Enter the character: ").lower()[0]
+            self.client.connect(self.__BROKER_ADDR, self.__PORT)
+            if char == "s":
+                self.client.publish(self.topic_wh_content_set, json.dumps(wh_content))
+                for config in line_configs:
+                    self.client.publish(self.topic_line_config_set, json.dumps(config))
+                time.sleep(0.5)
+                self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
+            elif char == "r":
+                self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
+            elif char =="x":
+                self.client.publish(self.topic_factory_command_set, json.dumps({"stop": True}))
+            elif char == "p":
+                self.client.publish(self.topic_factory_command_set, json.dumps({"run": False}))
+            elif char == "g":
+                if self.publish_get():
+                    return
+            elif char == "e":
+                return
+            else:
+                print(f"'{char}' not recognized please try again")
+
 if __name__ == "__main__":
     mqtt_pub = MqttPublish(factory_name="Right")
-    mqtt_pub.publish_all()
+
+    mqtt_pub.publish_set()
+    
+
     print("end")
