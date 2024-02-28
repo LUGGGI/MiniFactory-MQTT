@@ -8,12 +8,16 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2024.12.19"
+__version__ = "2024.02.28"
 
 import json
 import paho.mqtt.client as mqtt
 import logging
 from os import listdir
+
+# set the wanted factory
+FACTORY = "Right"
+# FACTORY = "Left"
 
 class Logger():
     STD_LEVEL_CONSOLE = "WARNING"
@@ -117,7 +121,7 @@ class MqttReceive():
             decoded_msg = msg.payload
 
         self.message_count += 1
-        self.log.info(f"{self.message_count}; {msg.topic.removeprefix(f"{self.topic_start}/")}; {decoded_msg}")
+        self.log.info(f"{self.message_count}; {msg.topic.removeprefix(f'{self.topic_start}/')}; {decoded_msg}")
 
 
     def __on_disconnect(self, client, userdata, rc):
@@ -127,4 +131,4 @@ class MqttReceive():
 
 if __name__ == "__main__":
     logger = Logger()
-    MqttReceive(factory_name="Right", log=logger.log)
+    MqttReceive(factory_name=FACTORY, log=logger.log)

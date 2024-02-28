@@ -15,7 +15,21 @@ import time
 
 read = True
 
-line_configs = [
+line_configs1 = [
+    {
+        "name": "Line1", 
+        "run": True,
+        "start_at": "start",
+        "end_at": "END",
+        "with_oven": True,
+        "with_saw": True,
+        "with_PM": True,
+        "with_WH": True,
+        "color": "WHITE"
+    },
+]
+
+line_configs4 = [
     {
         "name": "Init", 
         "run": True,
@@ -95,17 +109,14 @@ class MqttPublish():
     __BROKER_ADDR = "192.168.0.59"
     __PORT = 1883
 
-    def __init__(self, factory_name: str) -> None:
-        '''Init MqttInterface.
-        
-        Args:
-            factory_name (str): Name of the factory (for example Right).
-            states (State): Possible States of line.
-        '''
+    def __init__(self) -> None:
+        '''Init MqttInterface.'''
 
         self.__BROKER_ADDR = "test.mosquitto.org"
 
-        self.topic_start = f"MiniFactory/{factory_name}/Factory"
+        self.line_config = line_configs4
+        self.factory_side = "Right"
+        self.topic_start = f"MiniFactory/{self.factory_side}/Factory"
 
         self.client = mqtt.Client()
 
@@ -231,18 +242,20 @@ class MqttPublish():
 
     def publish_set(self):
         while True:
-            print("Publish program for the MiniFactory, enter the character for the corresponding option:")
+            print("\nPublish program for the MiniFactory, enter the character for the corresponding option:")
             print("s: start factory (sends line_configs, wh_configs and start command)")
             print("r: restart factory after PROBLEM occurred (sends a start command)")
             print("x: stops the factory")
             print("p: pauses the factory")
             print("g: show getter functions")
+            print("c: change config to be send")
+            print("f: change Factory side")
             print("e: exit the publish program")
             char = input("Enter the character: ").lower()[0]
             self.client.connect(self.__BROKER_ADDR, self.__PORT)
             if char == "s":
                 self.client.publish(self.topic_wh_content_set, json.dumps(wh_content))
-                for config in line_configs:
+                for config in self.line_config:
                     self.client.publish(self.topic_line_config_set, json.dumps(config))
                 time.sleep(0.5)
                 self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
@@ -255,13 +268,40 @@ class MqttPublish():
             elif char == "g":
                 if self.publish_get():
                     return
+            elif char == "c":
+                print(f"\nChanging config to be send:")
+                print(f"1: one line from Start to end.")
+                print(f"4: four lines with different paths")
+                char = input("Enter the character: ").lower()[0]
+                if char == "1":
+                    self.line_config = line_configs1
+                    print("Changed to line configs 1")
+                elif char == "4":
+                    self.line_config = line_configs4
+                    print("Changed to line configs 4")
+                else:
+                    print(f"'{char}' not recognized please try again")
+            elif char == "f":
+                print(f"\nChanging factory side, current side is: {self.factory_side}")
+                print("r: change to Right side")
+                print("l: change to Left side")
+                char = input("Enter the character: ").lower()[0]
+                if char == "r":
+                    self.factory_side = "Right"
+                elif char == "l":
+                    self.factory_side = "Left"
+                else:
+                    print(f"{char}: no available.")
+                    continue
+                print(f"Changed side to {self.factory_side}")
+                self.topic_start = f"MiniFactory/{self.factory_side}/Factory"
             elif char == "e":
                 return
             else:
                 print(f"'{char}' not recognized please try again")
 
 if __name__ == "__main__":
-    mqtt_pub = MqttPublish(factory_name="Right")
+    mqtt_pub = MqttPublish()
 
     mqtt_pub.publish_set()
     

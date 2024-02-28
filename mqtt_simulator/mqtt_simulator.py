@@ -49,7 +49,7 @@ class MqttHandler():
         try:
             msg = json.dumps(ast.literal_eval(msg))
         except Exception:
-            # msg = json.dumps({"msg": msg}) # uncomment to convert strings to dictionaries
+            msg = json.dumps({"msg": msg}) # uncomment to convert strings to dictionaries
             pass
         self.client.publish(f"{self.topic_start}/{topic}", msg)
 
