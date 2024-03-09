@@ -12,59 +12,22 @@ __version__ = "2024.02.28"
 
 import json
 import paho.mqtt.client as mqtt
-import logging
-from os import listdir
+from logger import log
 
 # set the wanted factory
-FACTORY = "Right"
+# FACTORY = "Right"
 # FACTORY = "Left"
-
-class Logger():
-    STD_LEVEL_CONSOLE = "WARNING"
-    LEVEL_FILE = logging.INFO
-
-
-    def __init__(self) -> None:
-            
-        self.log: logging.Logger = None
-
-
-        log_file_path = f"mqtt_simulator/mqtt{listdir('mqtt_simulator').__len__()+1}.log"
-
-
-        log_formatter_file = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%H:%M:%S')
-        log_formatter_console = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%M:%S')
-
-        # Setup File handler, change mode tp 'a' to keep the log after relaunch
-        file_handler = logging.FileHandler(log_file_path, mode='a')
-        file_handler.setFormatter(log_formatter_file)
-        file_handler.setLevel(self.LEVEL_FILE)
-
-        # Setup Stream Handler (i.e. console)
-        stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(log_formatter_file)
-        stream_handler.setLevel(logging.DEBUG)
-
-        # Get our logger
-        self.log = logging.getLogger()
-        self.log.setLevel(logging.DEBUG)
-
-        # Add both Handlers
-        self.log.addHandler(stream_handler)
-        self.log.addHandler(file_handler)
-
-        self.log.warning("0; Start of recording")
-
+FACTORY = "+" # can receive both
 
 class MqttReceive():
     '''Handels Receiving with mqtt broker.
     '''
 
-    __BROKER_ADDR = "192.168.0.59"
+    __BROKER_ADDR = "MiniFactory"
     __PORT = 1883
     
 
-    def __init__(self, factory_name: str, log: logging.Logger) -> None:
+    def __init__(self, factory_name: str) -> None:
         '''Init MqttInterface.
         
         Args:
@@ -72,7 +35,7 @@ class MqttReceive():
             states (State): Possible States of line.
         '''
 
-        self.__BROKER_ADDR = "test.mosquitto.org"
+        # self.__BROKER_ADDR = "test.mosquitto.org"
 
         self.topic_start = f"MiniFactory/{factory_name}/Factory"
 
@@ -106,12 +69,13 @@ class MqttReceive():
         '''
         self.log.debug(f"Connected to MQTT-Broker. Result code: {rc}")
 
-        client.subscribe("Debug")
-        client.subscribe("Status")
-        client.subscribe(f"{self.topic_start}/#")
+        client.subscribe("#")
+        # client.subscribe(f"{self.topic_start}/#")
         # client.subscribe(f"{self.__topic_start}/+/Get")
         # client.subscribe(f"{self.__topic_start}/+/Set")
         # client.subscribe(f"{self.__topic_start}/+/Data")
+        # client.subscribe("Debug")
+        # client.subscribe("Status")
 
     def __on_message_fallback(self, _client, _userdata, msg: mqtt.MQTTMessage):
         '''Callback for new message that couldn't be filtered in other callbacks.'''
@@ -130,5 +94,4 @@ class MqttReceive():
 
 
 if __name__ == "__main__":
-    logger = Logger()
-    MqttReceive(factory_name=FACTORY, log=logger.log)
+    MqttReceive(factory_name=FACTORY)

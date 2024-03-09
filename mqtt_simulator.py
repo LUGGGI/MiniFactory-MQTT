@@ -1,12 +1,12 @@
 '''Uses a prerecorded mqtt message file to replay all the mqtt messages
 
 Howto:
- - call from MQTT directory not the mqtt_simulator directory
+ - call from MQTT directory 
  - Only change values at bottom
  - Set file in LogReader to wanted recording
  - Set scaler in LogReader to play slower or faster(lower values sends the messages faster)
  - In MqttHandler set right broker and topic_start
- - Call with py .\mqtt_simulator\mqtt_simulator.py under windows or equivalent in other systems
+ - Call with py .\mqtt_simulator.py under windows or equivalent in other systems
 '''
 
 __author__ = "Lukas Beck"
@@ -64,11 +64,6 @@ class Logger():
             
         self.log: logging.Logger = None
 
-
-        # log_file_path = f"log_mqtt/mqtt{listdir('log_mqtt').__len__()+1}.log"
-
-
-        log_formatter_file = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%H:%M:%S')
         log_formatter_console = logging.Formatter("%(asctime)s.%(msecs)03d; %(message)s", datefmt='%M:%S')
 
         # Setup File handler, change mode tp 'a' to keep the log after relaunch
@@ -131,9 +126,9 @@ class LogReader():
 
 if __name__ == "__main__":
 
-    # BROKER_ADDR = "192.168.0.59" #direct connection to the MiniFactory broker
-    BROKER_ADDR = "test.mosquitto.org" # test broker works everywhere
+    BROKER_ADDR = "MiniFactory" #direct connection to the MiniFactory broker
+    # BROKER_ADDR = "test.mosquitto.org" # test broker works everywhere
 
     logger = Logger()
     mqtt_handler = MqttHandler(BROKER_ADDR, topic_start="MiniFactory/Right/Factory")
-    LogReader(file="mqtt_simulator/line1-4.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)
+    LogReader(file="mqtt_log_save/line1-4.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)

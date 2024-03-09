@@ -1,5 +1,4 @@
-'''Publish topics to mqtt broker
-'''
+'''Publish topics to mqtt broker'''
 
 __author__ = "Lukas Beck"
 __email__ = "st166506@stud.uni-stuttgart.de"
@@ -12,22 +11,55 @@ import json
 import paho.mqtt.client as mqtt
 import time
 
-
-read = True
-
 line_configs1 = [
     {
         "name": "Line1", 
         "run": True,
-        "start_at": "start",
-        "end_at": "END",
-        "with_oven": True,
-        "with_saw": True,
-        "with_PM": True,
-        "with_WH": True,
-        "color": "WHITE"
+        "start_at": "CB3",
+        "end_at": "storage",
+        "color": "WHITE",
     },
+    # {
+    #     "name": "Line2", 
+    #     "run": True,
+    #     "start_at": "storage",
+    #     "end_at": "CB5",
+    #     "color": "WHITE",
+    #     "start_when": "Line1",
+    # },
+
 ]
+# line_configs1 = [
+#     {
+#         "name": "Init", 
+#         "run": True,
+#         "start_at": "INIT",
+#         "end_at": "END"
+#     },
+#     {
+#         "name": "Line1", 
+#         "run": True,
+#         "start_at": "CB5",
+#         "end_at": "END",
+#         "end_int": True,
+#         "with_oven": True,
+#         "with_saw": True,
+#         "with_PM": True,
+#         "with_WH": True,
+#         "with_mill": True,
+#         "with_drill": True,
+#         "color": "WHITE"
+#     },
+#     {
+#         "name": "Line2", 
+#         "run": True,
+#         "start_at": "start",
+#         "start_int": True,
+#         "end_at": "MPS",
+#         "start_when": "Line1",
+#         "color": "WHITE"
+#     },
+# ]
 
 line_configs4 = [
     {
@@ -75,6 +107,105 @@ line_configs4 = [
     }
 ]
 
+init_config = [
+    {
+        "name": "Init", 
+        "run": True,
+        "start_at": "INIT",
+        "end_at": "END"
+    },
+]
+
+line_configs_continues_start = [
+    {
+        "name": "Line1w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "WHITE",
+    },
+    {
+        "name": "Line2w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "RED",
+    },
+    {
+        "name": "Line3w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "BLUE",
+    },
+]
+
+line_configs_continues = [
+    {
+        "name": "Line1s", 
+        "run": True,
+        "start_at": "start",
+        "end_at": "storage",
+        "with_oven": True,
+        "with_saw": True,
+        "color": "WHITE",
+        "restart": True,
+        "start_when": "Line1w",
+        "start_int": True,
+    },
+    {
+        "name": "Line1w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "WHITE",
+        "restart": True,
+        "start_when": "Line1s",
+        "end_int": True,
+    },
+    {
+        "name": "Line2s", 
+        "run": True,
+        "start_at": "start",
+        "end_at": "storage",
+        "with_PM": True,
+        "color": "RED",
+        "restart": True,
+        "start_when": "Line2w",
+        "start_int": True,
+    },
+    {
+        "name": "Line2w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "RED",
+        "restart": True,
+        "start_when": "Line2s",
+        "end_int": True,
+    },
+    {
+        "name": "Line3s", 
+        "run": True,
+        "start_at": "start",
+        "end_at": "storage",
+        "color": "BLUE",
+        "restart": True,
+        "start_when": "Line3w",
+        "start_int": True,
+    },
+    {
+        "name": "Line3w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "END",
+        "color": "BLUE",
+        "restart": True,
+        "start_when": "Line3s",
+        "end_int": True,
+    },
+]
+
 factory_config = {
     "exit_if_end": True
 }
@@ -86,14 +217,14 @@ factory_command = {
 
 wh_content = [
         [
-            "Carrier",
-            "Carrier",
-            "Carrier"
-        ],
-        [
             "WHITE",
             "RED",
             "BLUE"
+        ],
+        [
+            "Carrier",
+            "Carrier",
+            "Carrier"
         ],
         [
             "Empty",
@@ -106,22 +237,25 @@ class MqttPublish():
     '''Handels Publishing to mqtt broker.
     '''
 
-    __BROKER_ADDR = "192.168.0.59"
+    __BROKER_ADDR = "MiniFactory"
     __PORT = 1883
 
-    def __init__(self) -> None:
+    def __init__(self, std_factory: str, std_config) -> None:
         '''Init MqttInterface.'''
 
-        self.__BROKER_ADDR = "test.mosquitto.org"
+        # self.__BROKER_ADDR = "test.mosquitto.org"
 
-        self.line_config = line_configs4
-        self.factory_side = "Right"
-        self.topic_start = f"MiniFactory/{self.factory_side}/Factory"
+        self.line_config = std_config
+        self.factory_side = std_factory
+        self.set_topics()
 
         self.client = mqtt.Client()
 
         self.client.connect(self.__BROKER_ADDR, self.__PORT)
 
+
+    def set_topics(self):
+        self.topic_start = f"MiniFactory/{self.factory_side}/Factory"
 
         self.topic_line_config_set = f"{self.topic_start}/LineConfig/Set"
         self.topic_factory_config_set = f"{self.topic_start}/FactoryConfig/Set"
@@ -136,86 +270,6 @@ class MqttPublish():
         self.topic_line_status_get = f"{self.topic_start}/LineStatus/Get"
 
 
-    def publish_all(self):
-        
-        
-        self.client.publish(self.topic_wh_content_set, json.dumps(wh_content))
-        print(f"{self.topic_wh_content_set.removeprefix(f'{self.topic_start}/')}")
-
-        # self.client.publish(self.topic_line_config_set, json.dumps({
-        #     "name": "Test",
-        #     "run": True,
-        #     "start_at": "storage",
-        #     "end_at": "CB5",
-        #     "color": "RED"
-        # }))
-        # self.client.publish(self.topic_line_config_set, json.dumps({
-        #     "name": "Line1", 
-        #     "run": True,
-        #     "start_at": "start",
-        #     "end_at": "END",
-        #     "with_oven": False,
-        #     "with_saw": True,
-        #     "with_PM": True,
-        #     "with_WH": True,
-        #     "color": "WHITE"
-        # }))
-
-
-        # return
-
-        # self.client.publish(self.topic_factory_command_set, json.dumps({"stop": True}))
-        # print(f"{self.topic_factory_command_set.removeprefix(f'{self.topic_start}/')}")
-        
-        for config in line_configs:
-            self.client.publish(self.topic_line_config_set, json.dumps(config))
-            print(f"{self.topic_line_config_set.removeprefix(f'{self.topic_start}/')}")
-
-        time.sleep(0.5)
-
-        self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
-        print(f"{self.topic_factory_command_set.removeprefix(f'{self.topic_start}/')}")
-
-        # self.client.publish(self.topic_line_config_get)
-        # print(f"{self.topic_line_config_get.removeprefix(f'{self.topic_start}/')}")
-
-        # self.client.publish(self.topic_line_status_get)
-        # print(f"{self.topic_line_status_get.removeprefix(f'{self.topic_start}/')}")
-
-        # time.sleep(1)
-            
-        # self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
-        # print(f"{self.topic_factory_command_set.removeprefix(f'{self.topic_start}/')}")
-
-        # time.sleep(1)
-
-        # self.client.publish(self.topic_line_config_get)
-        # print(f"{self.topic_line_config_get.removeprefix(f'{self.topic_start}/')}")
-
-        # self.client.publish(self.topic_line_status_get)
-        # print(f"{self.topic_line_status_get.removeprefix(f'{self.topic_start}/')}")
-
-        # time.sleep(1)
-
-
-        # self.client.publish(self.topic_factory_config_set, json.dumps({"exit_if_end": True}))
-        # print(f"{self.topic_factory_config_set.removeprefix(f'{self.topic_start}/')}")
-
-        # time.sleep(3)
-
-        # self.client.publish(self.topic_wh_content_get)
-        # print(f"{self.topic_wh_content_get.removeprefix(f'{self.__topic_start}/')}")
-
-        # # todo get working 
-        # self.client.publish(self.topic_line_config_get)
-        # print(f"{self.topic_line_config_get.removeprefix(f'{self.__topic_start}/')}")
-
-        # self.client.publish(self.topic_factory_config_get)
-        # print(f"{self.topic_factory_config_get.removeprefix(f'{self.__topic_start}/')}")
-
-        print("End of publish all")
-
-
     def publish_get(self) -> bool:
         while True:
             print("Publish program for the MiniFactory, enter the character for the corresponding option:")
@@ -223,6 +277,7 @@ class MqttPublish():
             print("l: get Line status")
             print("w: get Warehouse content")
             print("m: get Machine status")
+            print("f: get Factory commands")
             print("s: show setter functions")
             print("e: exit the publish program")
             char = input("Enter the character: ").lower()[0]
@@ -235,6 +290,8 @@ class MqttPublish():
                 self.client.publish(self.topic_wh_content_get)
             elif char == "m":
                 self.client.publish(self.topic_machine_status_get)
+            elif char == "f":
+                self.client.publish(self.topic_factory_command_get)
             elif char == "s":
                 return False
             elif char == "e":
@@ -247,9 +304,9 @@ class MqttPublish():
             print("r: restart factory after PROBLEM occurred (sends a start command)")
             print("x: stops the factory")
             print("p: pauses the factory")
-            print("g: show getter functions")
             print("c: change config to be send")
             print("f: change Factory side")
+            print("g: show getter functions")
             print("e: exit the publish program")
             char = input("Enter the character: ").lower()[0]
             self.client.connect(self.__BROKER_ADDR, self.__PORT)
@@ -259,6 +316,10 @@ class MqttPublish():
                     self.client.publish(self.topic_line_config_set, json.dumps(config))
                 time.sleep(0.5)
                 self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
+                if self.line_config == line_configs_continues_start:
+                    time.sleep(1)
+                    for config in line_configs_continues:
+                        self.client.publish(self.topic_line_config_set, json.dumps(config))
             elif char == "r":
                 self.client.publish(self.topic_factory_command_set, json.dumps({"run": True}))
             elif char =="x":
@@ -270,15 +331,23 @@ class MqttPublish():
                     return
             elif char == "c":
                 print(f"\nChanging config to be send:")
+                print(f"i: set factory to initial state.")
                 print(f"1: one line from Start to end.")
-                print(f"4: four lines with different paths")
+                print(f"2: four lines with different paths")
+                print(f"3: Runs a loop indefinitely")
                 char = input("Enter the character: ").lower()[0]
-                if char == "1":
+                if char == "i":
+                    self.line_config = init_config
+                    print("Changed to init config")
+                elif char == "1":
                     self.line_config = line_configs1
                     print("Changed to line configs 1")
-                elif char == "4":
+                elif char == "2":
                     self.line_config = line_configs4
                     print("Changed to line configs 4")
+                elif char == "3":
+                    self.line_config = line_configs_continues_start
+                    print("Changed to line configs continues")
                 else:
                     print(f"'{char}' not recognized please try again")
             elif char == "f":
@@ -294,14 +363,14 @@ class MqttPublish():
                     print(f"{char}: no available.")
                     continue
                 print(f"Changed side to {self.factory_side}")
-                self.topic_start = f"MiniFactory/{self.factory_side}/Factory"
+                self.set_topics()
             elif char == "e":
                 return
             else:
                 print(f"'{char}' not recognized please try again")
 
 if __name__ == "__main__":
-    mqtt_pub = MqttPublish()
+    mqtt_pub = MqttPublish(std_factory="Right", std_config=line_configs1)
 
     mqtt_pub.publish_set()
     
