@@ -5,7 +5,7 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2024.01.19"
+__version__ = "2024.03.09"
 
 import json
 import paho.mqtt.client as mqtt
@@ -17,6 +17,9 @@ line_configs1 = [
         "run": True,
         "start_at": "CB3",
         "end_at": "storage",
+        "with_mill": True,
+        "with_drill": True,
+        "end_int": True,
         "color": "WHITE",
     },
     # {
@@ -29,37 +32,6 @@ line_configs1 = [
     # },
 
 ]
-# line_configs1 = [
-#     {
-#         "name": "Init", 
-#         "run": True,
-#         "start_at": "INIT",
-#         "end_at": "END"
-#     },
-#     {
-#         "name": "Line1", 
-#         "run": True,
-#         "start_at": "CB5",
-#         "end_at": "END",
-#         "end_int": True,
-#         "with_oven": True,
-#         "with_saw": True,
-#         "with_PM": True,
-#         "with_WH": True,
-#         "with_mill": True,
-#         "with_drill": True,
-#         "color": "WHITE"
-#     },
-#     {
-#         "name": "Line2", 
-#         "run": True,
-#         "start_at": "start",
-#         "start_int": True,
-#         "end_at": "MPS",
-#         "start_when": "Line1",
-#         "color": "WHITE"
-#     },
-# ]
 
 line_configs4 = [
     {
@@ -199,6 +171,8 @@ line_configs_continues = [
         "run": True,
         "start_at": "storage",
         "end_at": "END",
+        "with_mill": True,
+        "with_drill": True,
         "color": "BLUE",
         "restart": True,
         "start_when": "Line3s",
@@ -224,7 +198,7 @@ wh_content = [
         [
             "Carrier",
             "Carrier",
-            "Carrier"
+            "Empty"
         ],
         [
             "Empty",
@@ -370,7 +344,7 @@ class MqttPublish():
                 print(f"'{char}' not recognized please try again")
 
 if __name__ == "__main__":
-    mqtt_pub = MqttPublish(std_factory="Right", std_config=line_configs1)
+    mqtt_pub = MqttPublish(std_factory="Right", std_config=line_configs_continues_start)
 
     mqtt_pub.publish_set()
     
