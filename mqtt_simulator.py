@@ -131,4 +131,4 @@ if __name__ == "__main__":
 
     logger = Logger()
     mqtt_handler = MqttHandler(BROKER_ADDR, topic_start="MiniFactory/Right/Factory")
-    LogReader(file="mqtt_log_save/line1-4.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)
+    LogReader(file="mqtt_log_save/line1.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)
