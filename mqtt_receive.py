@@ -16,8 +16,8 @@ from logger import log
 
 # set the wanted factory
 # FACTORY = "Right"
-# FACTORY = "Left"
-FACTORY = "+" # can receive both
+FACTORY = "Left"
+# FACTORY = "+" # can receive both
 
 class MqttReceive():
     '''Handels Receiving with mqtt broker.
@@ -35,7 +35,7 @@ class MqttReceive():
             states (State): Possible States of line.
         '''
 
-        # self.__BROKER_ADDR = "test.mosquitto.org"
+        self.__BROKER_ADDR = "test.mosquitto.org"
 
         self.topic_start = f"MiniFactory/{factory_name}/Factory"
 
@@ -69,7 +69,7 @@ class MqttReceive():
         '''
         self.log.debug(f"Connected to MQTT-Broker. Result code: {rc}")
 
-        client.subscribe("#")
+        client.subscribe("MiniFactory/#")
         # client.subscribe(f"{self.topic_start}/#")
         # client.subscribe(f"{self.__topic_start}/+/Get")
         # client.subscribe(f"{self.__topic_start}/+/Set")
