@@ -13,23 +13,23 @@ import time
 
 line_configs1 = [
     {
-        "name": "Line1", 
+        "name": "Line1s", 
         "run": True,
-        "start_at": "CB3",
+        "start_at": "start",
         "end_at": "storage",
-        "with_mill": True,
-        "with_drill": True,
-        "end_int": True,
+        "with_oven": True,
+        "with_saw": True,
+        "with_PM": True,
         "color": "WHITE",
     },
-    # {
-    #     "name": "Line2", 
-    #     "run": True,
-    #     "start_at": "storage",
-    #     "end_at": "CB5",
-    #     "color": "WHITE",
-    #     "start_when": "Line1",
-    # },
+    {
+        "name": "Line2w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "end",
+        "color": "WHITE",
+        "start_when": "Line1s",
+    },
 
 ]
 
@@ -190,22 +190,22 @@ factory_command = {
 }
 
 wh_content = [
-        [
-            "WHITE",
-            "RED",
-            "BLUE"
-        ],
-        [
-            "Carrier",
-            "Carrier",
-            "Empty"
-        ],
-        [
-            "Empty",
-            "Empty",
-            "Empty"
-        ]
+    [
+        "WHITE",
+        "RED",
+        "BLUE"
+    ],
+    [
+        "Carrier",
+        "Carrier",
+        "Empty"
+    ],
+    [
+        "Empty",
+        "Empty",
+        "Empty"
     ]
+]
 
 class MqttPublish():
     '''Handels Publishing to mqtt broker.
