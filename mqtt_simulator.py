@@ -51,7 +51,7 @@ class MqttHandler():
         except Exception:
             msg = json.dumps({"msg": msg}) # uncomment to convert strings to dictionaries
             pass
-        self.client.publish(f"{self.topic_start}/{topic}", msg)
+        self.client.publish(f"{self.topic_start}{topic}", msg)
 
 
 class Logger():
@@ -126,9 +126,12 @@ class LogReader():
 
 if __name__ == "__main__":
 
-    BROKER_ADDR = "MiniFactory" #direct connection to the MiniFactory broker
-    # BROKER_ADDR = "test.mosquitto.org" # test broker works everywhere
+    # BROKER_ADDR = "MiniFactory" #direct connection to the MiniFactory broker
+    BROKER_ADDR = "test.mosquitto.org" # test broker works everywhere
+    TOPIC_START = ""
+    # TOPIC_START = "MiniFactory/Right/Factory/"
+
 
     logger = Logger()
-    mqtt_handler = MqttHandler(BROKER_ADDR, topic_start="MiniFactory/Right/Factory")
+    mqtt_handler = MqttHandler(BROKER_ADDR, topic_start=TOPIC_START)
     LogReader(file="mqtt_log_save/line1.log", mqtt_handler=mqtt_handler, log=logger.log, scaler=1.0)
