@@ -1,432 +1,610 @@
-16:20:31.928; 0; Start of recording
-16:20:34.751; 1; FactoryStatus/Data; Program started
-16:20:34.755; 2; MachineStatus/Data; {'CB1': ['FREE', 'None'], 'CB3': ['FREE', 'None'], 'CB4': ['FREE', 'None'], 'CB4_TO_WH': ['FREE', 'None'], 'CB4_TO_CB5': ['FREE', 'None'], 'CB5': ['FREE', 'None'], 'GR1': ['FREE', 'None'], 'GR2': ['FREE', 'None'], 'GR2_CB1_TO_CB3': ['FREE', 'None'], 'GR2_CB1_TO_PM': ['FREE', 'None'], 'GR2_PM_TO_CB3': ['FREE', 'None'], 'GR3': ['FREE', 'None'], 'VG2': ['FREE', 'None'], 'MPS': ['FREE', 'None'], 'PM': ['FREE', 'None'], 'SL': ['FREE', 'None'], 'WH': ['FREE', 'None'], 'WH_STORE': ['FREE', 'None'], 'WH_RETRIEVE': ['FREE', 'None'], 'WAITING': ['FREE', 'None'], 'TEST': ['FREE', 'None']}
-16:20:39.727; 3; WHContent/Set; [['Carrier', 'Carrier', 'Carrier'], ['WHITE', 'RED', 'BLUE'], ['Carrier', 'Carrier', 'Carrier']]
-16:20:39.727; 4; LineConfig/Set; {'name': 'Init', 'run': True, 'start_at': 'INIT', 'end_at': 'END'}
-16:20:39.727; 5; LineConfig/Set; {'name': 'Line1', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_oven': True, 'with_saw': True, 'with_PM': False, 'with_WH': False, 'color': 'WHITE'}
-16:20:39.727; 6; LineConfig/Set; {'name': 'Line2', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_oven': False, 'with_saw': True, 'with_PM': True, 'with_WH': True, 'color': 'RED'}
-16:20:39.727; 7; LineConfig/Set; {'name': 'Line3', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_PM': False, 'with_WH': True, 'color': 'BLUE'}
-16:20:39.727; 8; LineConfig/Set; {'name': 'Line4', 'run': True, 'start_at': 'storage', 'end_at': 'END', 'color': 'RED'}
-16:20:39.767; 9; FactoryStatus/Data; New line added: {'name': 'Init', 'run': True, 'start_at': 'INIT', 'end_at': 'END'}
-16:20:40.001; 10; FactoryStatus/Data; New line added: {'name': 'Line1', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_oven': True, 'with_saw': True, 'with_PM': False, 'with_WH': False, 'color': 'WHITE'}
-16:20:40.016; 11; FactoryStatus/Data; New line added: {'name': 'Line2', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_oven': False, 'with_saw': True, 'with_PM': True, 'with_WH': True, 'color': 'RED'}
-16:20:40.016; 12; FactoryStatus/Data; New line added: {'name': 'Line3', 'run': True, 'start_at': 'start', 'end_at': 'END', 'with_PM': False, 'with_WH': True, 'color': 'BLUE'}
-16:20:40.032; 13; FactoryStatus/Data; New line added: {'name': 'Line4', 'run': True, 'start_at': 'storage', 'end_at': 'END', 'color': 'RED'}
-16:20:40.032; 14; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}}}
-16:20:40.032; 15; LineStatus/Data; {'Line1': {'self': {'state': 'INIT', 'product_at': None}}}
-16:20:40.032; 16; LineStatus/Data; {'Line2': {'self': {'state': 'INIT', 'product_at': None}}}
-16:20:40.032; 17; LineStatus/Data; {'Line3': {'self': {'state': 'INIT', 'product_at': None}}}
-16:20:40.032; 18; LineStatus/Data; {'Line4': {'self': {'state': 'INIT', 'product_at': None}}}
-16:20:40.225; 19; FactoryCommand/Set; {'run': True}
-16:20:40.341; 20; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'GR2': {'status': 'INIT'}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}, 'WH': {'status': 'INIT'}}}
-16:20:40.631; 21; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'GR2': {'status': 'INIT'}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
-16:20:40.649; 22; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'GR2': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
-16:20:40.690; 23; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
-16:20:40.711; 24; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
-16:20:40.732; 25; LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
-16:20:41.226; 26; FactoryConfig/Set; {'exit_if_end': True}
-16:20:48.497; 27; LineStatus/Data; {'Init': {'self': {'state': 'END', 'product_at': None}}}
-16:20:48.533; 28; FactoryStatus/Data; Stopped line: Init
-16:20:48.560; 29; MachineStatus/Data; {'GR1': ['RUNNING', 'Line1']}
-16:20:48.571; 30; MachineStatus/Data; {'WH': ['BLOCKED', 'Line4']}
-16:20:48.571; 31; MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line4']}
-16:20:48.571; 32; MachineStatus/Data; {'WH_RETRIEVE': ['RUNNING', 'Line4']}
-16:20:48.571; 33; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}}}
-16:20:48.571; 34; LineStatus/Data; {'Line2': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'GR1'}}
-16:20:48.579; 35; LineStatus/Data; {'Line3': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'GR1'}}
-16:20:48.579; 36; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': None}}}
-16:20:48.594; 37; MachineStatus/Data; {'MPS': ['RUNNING', 'Line1']}
-16:20:48.607; 38; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
-16:20:48.612; 39; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': None}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
-16:20:49.031; 40; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
-16:20:49.068; 41; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
-16:20:49.089; 42; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_MOVING_POS'}, 'MPS': {'status': 'INIT'}}}
-16:20:49.100; 43; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:20:53.405; 44; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}, 'MPS': {'status': 'INIT'}}}
-16:20:56.264; 45; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:20:59.439; 46; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}, 'MPS': {'status': 'INIT'}}}
-16:21:00.282; 47; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}, 'MPS': {'status': 'INIT'}}}
-16:21:00.293; 48; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}, 'MPS': {'status': 'INIT'}}}
-16:21:03.355; 49; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:21:07.310; 50; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}, 'MPS': {'status': 'INIT'}}}
-16:21:10.485; 51; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:21:10.970; 52; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}, 'MPS': {'status': 'INIT'}}}
-16:21:14.329; 53; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:21:15.092; 54; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'GET_PRODUCT'}}}
-16:21:18.332; 55; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_MOVING_POS'}}}
-16:21:18.569; 56; LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}, 'MPS': {'status': 'INIT'}}}
-16:21:19.480; 57; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
-16:21:19.499; 58; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
-16:21:19.515; 59; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'OVEN'}}}
-16:21:22.765; 60; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'MOVING'}}}
-16:21:26.200; 61; LineStatus/Data; {'Line4': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:21:27.695; 62; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:21:28.483; 63; MachineStatus/Data; {'GR1': ['RUNNING', 'Line2']}
-16:21:28.483; 64; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:21:28.500; 65; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
-16:21:28.689; 66; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_MOVING_POS'}}}
-16:21:29.489; 67; MachineStatus/Data; {'CB4': ['BLOCKED', 'Line4']}
-16:21:29.509; 68; MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line4']}
-16:21:29.518; 69; MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line4']}
-16:21:29.518; 70; LineStatus/Data; {'Line4': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'VG1'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'INIT'}}}
-16:21:29.519; 71; MachineStatus/Data; {'WH': ['FREE', 'None']}
-16:21:29.522; 72; MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
-16:21:29.523; 73; MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
-16:21:29.525; 74; LineStatus/Data; {'Line4': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:21:32.579; 75; MachineStatus/Data; {'CB5': ['RUNNING', 'Line4']}
-16:21:32.586; 76; LineStatus/Data; {'Line4': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:21:32.606; 77; MachineStatus/Data; {'GR3': ['RUNNING', 'Line4']}
-16:21:32.619; 78; LineStatus/Data; {'Line4': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
-16:21:32.819; 79; LineStatus/Data; {'Line4': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:21:33.201; 80; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}}}
-16:21:33.587; 81; LineStatus/Data; {'Line4': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:21:34.380; 82; MachineStatus/Data; {'CB4': ['FREE', 'None']}
-16:21:34.396; 83; MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
-16:21:34.396; 84; MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
-16:21:34.396; 85; LineStatus/Data; {'Line4': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:21:38.030; 86; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:21:38.047; 87; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
-16:21:38.430; 88; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_SAW'}}}
-16:21:39.234; 89; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}}}
-16:21:39.597; 90; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:21:39.930; 91; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'SAWING'}}}
-16:21:39.999; 92; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}}}
-16:21:40.011; 93; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}}}
-16:21:41.762; 94; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:21:41.793; 95; MachineStatus/Data; {'CB5': ['FREE', 'None']}
-16:21:41.794; 96; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
-16:21:41.944; 97; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
-16:21:43.198; 98; LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:21:44.226; 99; MachineStatus/Data; {'CB1': ['RUNNING', 'Line1']}
-16:21:44.238; 100; LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:21:44.253; 101; MachineStatus/Data; {'GR2': ['RUNNING', 'Line1']}
-16:21:44.266; 102; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['BLOCKED', 'Line1']}
-16:21:44.270; 103; MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line1']}
-16:21:44.270; 104; MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line1']}
-16:21:44.270; 105; LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'INIT'}}}
-16:21:44.461; 106; LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:21:45.585; 107; MachineStatus/Data; {'MPS': ['FREE', 'None']}
-16:21:45.585; 108; LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:21:47.018; 109; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}}}
-16:21:47.560; 110; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:21:48.705; 111; LineStatus/Data; {'Line4': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
-16:21:48.987; 112; MachineStatus/Data; {'GR2': ['BLOCKED', 'Line1']}
-16:21:48.999; 113; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['RUNNING', 'Line1']}
-16:21:48.999; 114; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:21:49.212; 115; MachineStatus/Data; {'SL': ['RUNNING', 'Line4']}
-16:21:49.223; 116; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
-16:21:49.237; 117; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
-16:21:49.249; 118; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
-16:21:50.634; 119; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
-16:21:51.520; 120; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
-16:21:52.503; 121; MachineStatus/Data; {'VG2': ['RUNNING', 'Line4']}
-16:21:52.523; 122; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
-16:21:52.545; 123; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:21:53.627; 124; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:21:53.748; 125; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:21:55.051; 126; LineStatus/Data; {'Line4': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'MOVING'}}}
-16:21:55.337; 127; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'MOVING'}}}
-16:21:56.766; 128; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:21:56.787; 129; MachineStatus/Data; {'CB1': ['FREE', 'None']}
-16:21:56.799; 130; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
-16:21:57.345; 131; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:21:58.052; 132; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
-16:21:58.233; 133; LineStatus/Data; {'Line2': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}}}
-16:21:59.061; 134; MachineStatus/Data; {'MPS': ['RUNNING', 'Line2']}
-16:21:59.077; 135; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}}}
-16:21:59.088; 136; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
-16:21:59.102; 137; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
-16:21:59.461; 138; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
-16:21:59.475; 139; MachineStatus/Data; {'SL': ['FREE', 'None']}
-16:21:59.492; 140; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:00.231; 141; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
-16:22:00.572; 142; MachineStatus/Data; {'GR3': ['FREE', 'None']}
-16:22:00.572; 143; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'MOVING'}}}
-16:22:02.079; 144; LineStatus/Data; {'Line4': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:22:02.884; 145; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:22:03.611; 146; LineStatus/Data; {'Line4': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
-16:22:04.716; 147; LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
-16:22:05.261; 148; MachineStatus/Data; {'CB3': ['RUNNING', 'Line1']}
-16:22:05.272; 149; LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
-16:22:05.286; 150; LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': None}}}
-16:22:05.300; 151; LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
-16:22:07.174; 152; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:22:08.224; 153; MachineStatus/Data; {'GR1': ['RUNNING', 'Line3']}
-16:22:08.237; 154; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:22:08.240; 155; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
-16:22:08.433; 156; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_MOVING_POS'}}}
-16:22:08.578; 157; MachineStatus/Data; {'CB4': ['BLOCKED', 'Line1']}
-16:22:08.592; 158; MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line1']}
-16:22:08.597; 159; MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line1']}
-16:22:08.598; 160; LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
-16:22:08.603; 161; LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': None}}}
-16:22:08.617; 162; LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': 'RUN'}}}
-16:22:08.795; 163; LineStatus/Data; {'Line4': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'END'}}}
-16:22:08.815; 164; FactoryStatus/Data; Stopped line: Line4
-16:22:09.929; 165; MachineStatus/Data; {'CB3': ['FREE', 'None']}
-16:22:09.934; 166; LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:22:13.027; 167; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}}}
-16:22:13.070; 168; MachineStatus/Data; {'CB5': ['RUNNING', 'Line1']}
-16:22:13.084; 169; LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:22:13.097; 170; MachineStatus/Data; {'GR3': ['RUNNING', 'Line1']}
-16:22:13.110; 171; LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
-16:22:13.305; 172; LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:22:14.551; 173; MachineStatus/Data; {'CB4': ['FREE', 'None']}
-16:22:14.561; 174; MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
-16:22:14.561; 175; MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
-16:22:14.561; 176; LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:22:17.293; 177; MachineStatus/Data; {'GR2': ['FREE', 'None']}
-16:22:17.306; 178; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['FREE', 'None']}
-16:22:17.311; 179; MachineStatus/Data; {'GR2_CB1_TO_PM': ['FREE', 'None']}
-16:22:17.311; 180; MachineStatus/Data; {'GR2_PM_TO_CB3': ['FREE', 'None']}
-16:22:17.311; 181; LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:22:17.772; 182; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_SAW'}}}
-16:22:18.099; 183; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:22:18.117; 184; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
-16:22:18.960; 185; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}}}
-16:22:19.301; 186; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'SAWING'}}}
-16:22:19.622; 187; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:22:19.763; 188; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}}}
-16:22:19.783; 189; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}}}
-16:22:21.311; 190; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
-16:22:21.674; 191; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:22:21.694; 192; MachineStatus/Data; {'CB5': ['FREE', 'None']}
-16:22:21.706; 193; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
-16:22:22.577; 194; LineStatus/Data; {'Line2': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:22:23.546; 195; MachineStatus/Data; {'CB1': ['RUNNING', 'Line2']}
-16:22:23.551; 196; LineStatus/Data; {'Line2': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:22:23.568; 197; MachineStatus/Data; {'GR2': ['RUNNING', 'Line2']}
-16:22:23.585; 198; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['BLOCKED', 'Line2']}
-16:22:23.585; 199; MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line2']}
-16:22:23.585; 200; MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line2']}
-16:22:23.585; 201; LineStatus/Data; {'Line2': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'INIT'}}}
-16:22:23.785; 202; LineStatus/Data; {'Line2': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:22:24.776; 203; MachineStatus/Data; {'MPS': ['FREE', 'None']}
-16:22:24.790; 204; LineStatus/Data; {'Line2': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:22:26.801; 205; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}}}
-16:22:27.472; 206; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:22:28.196; 207; MachineStatus/Data; {'GR2': ['BLOCKED', 'Line2']}
-16:22:28.210; 208; MachineStatus/Data; {'GR2_CB1_TO_PM': ['RUNNING', 'Line2']}
-16:22:28.222; 209; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:22:28.618; 210; LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
-16:22:29.102; 211; MachineStatus/Data; {'SL': ['RUNNING', 'Line1']}
-16:22:29.115; 212; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
-16:22:29.127; 213; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
-16:22:29.130; 214; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
-16:22:30.407; 215; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
-16:22:30.828; 216; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
-16:22:32.039; 217; MachineStatus/Data; {'VG2': ['RUNNING', 'Line1']}
-16:22:32.052; 218; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
-16:22:32.250; 219; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:32.353; 220; LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:33.080; 221; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:22:34.089; 222; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:34.847; 223; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'MOVING'}}}
-16:22:36.076; 224; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:22:36.093; 225; MachineStatus/Data; {'CB1': ['FREE', 'None']}
-16:22:36.108; 226; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
-16:22:36.699; 227; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:22:37.425; 228; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
-16:22:37.923; 229; LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}}}
-16:22:38.812; 230; MachineStatus/Data; {'MPS': ['RUNNING', 'Line3']}
-16:22:38.828; 231; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:38.833; 232; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}}}
-16:22:38.841; 233; MachineStatus/Data; {'SL': ['FREE', 'None']}
-16:22:38.846; 234; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:22:38.847; 235; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
-16:22:38.854; 236; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
-16:22:39.568; 237; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
-16:22:40.629; 238; MachineStatus/Data; {'GR3': ['FREE', 'None']}
-16:22:40.661; 239; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'MOVING'}}}
-16:22:41.805; 240; LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:22:43.356; 241; LineStatus/Data; {'Line1': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
-16:22:44.398; 242; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:22:46.265; 243; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
-16:22:46.790; 244; MachineStatus/Data; {'PM': ['RUNNING', 'Line2']}
-16:22:46.804; 245; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_MOVING_POS'}}}
-16:22:46.815; 246; MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line2']}
-16:22:46.815; 247; MachineStatus/Data; {'GR2_PM_TO_CB3': ['WAITING', 'Line2']}
-16:22:46.815; 248; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_MOVING_POS'}, 'PM': {'status': None}, 'CB2': {'status': 'RUN'}}}
-16:22:46.867; 249; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:22:47.697; 250; MachineStatus/Data; {'GR1': ['FREE', 'None']}
-16:22:47.701; 251; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
-16:22:48.516; 252; LineStatus/Data; {'Line1': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'END'}}}
-16:22:48.537; 253; FactoryStatus/Data; Stopped line: Line1
-16:22:48.920; 254; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'MOVING'}, 'PM': {'status': None}, 'CB2': {'status': 'RUN'}}}
-16:22:50.233; 255; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'MOVING'}, 'PM': {'status': 'START'}, 'CB2': {'status': 'RUN'}}}
-16:22:50.248; 256; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'MOVING'}, 'PM': {'status': 'CB_TO_PUNCH'}, 'CB2': {'status': 'RUN'}}}
-16:22:50.400; 257; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_PUNCH'}, 'CB2': {'status': 'RUN'}}}
-16:22:54.507; 258; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'PUNCHING'}, 'CB2': {'status': 'RUN'}}}
-16:22:55.130; 259; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_OUT'}, 'CB2': {'status': 'RUN'}}}
-16:22:57.260; 260; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
-16:22:57.765; 261; LineStatus/Data; {'Line2': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_OUT'}, 'CB2': {'status': 'RUN'}}}
-16:22:59.715; 262; LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:22:59.741; 263; MachineStatus/Data; {'CB1': ['RUNNING', 'Line3']}
-16:22:59.752; 264; LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
-16:22:59.766; 265; LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': None}}}
-16:22:59.775; 266; LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}}}
-16:23:02.165; 267; MachineStatus/Data; {'MPS': ['FREE', 'None']}
-16:23:02.180; 268; LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}}}
-16:23:02.612; 269; MachineStatus/Data; {'GR2_PM_TO_CB3': ['RUNNING', 'Line2']}
-16:23:02.618; 270; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'END'}, 'CB2': {'status': 'END'}}}
-16:23:02.635; 271; MachineStatus/Data; {'PM': ['FREE', 'None']}
-16:23:02.635; 272; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'GET_PRODUCT'}, 'CB2': {'status': 'END'}}}
-16:23:04.494; 273; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'GRIPPING'}, 'CB2': {'status': 'END'}}}
-16:23:05.541; 274; MachineStatus/Data; {'CB1': ['WAITING', 'Line3']}
-16:23:05.554; 275; LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'waiting_for': 'GR2_CB1_TO_CB3', 'CB1': {'status': 'END'}}}
-16:23:07.115; 276; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'GRIPPING'}, 'CB2': {'status': 'END'}}}
-16:23:07.130; 277; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_MOVING_POS'}}}
-16:23:07.140; 278; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
-16:23:11.586; 279; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:23:13.441; 280; LineStatus/Data; {'Line2': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
-16:23:13.887; 281; MachineStatus/Data; {'CB3': ['RUNNING', 'Line2']}
-16:23:13.900; 282; LineStatus/Data; {'Line2': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
-16:23:13.915; 283; MachineStatus/Data; {'WH': ['RUNNING', 'Line2']}
-16:23:13.924; 284; MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line2']}
-16:23:13.924; 285; MachineStatus/Data; {'WH_RETRIEVE': ['BLOCKED', 'Line2']}
-16:23:13.933; 286; LineStatus/Data; {'Line2': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
-16:23:14.093; 287; LineStatus/Data; {'Line2': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
-16:23:14.130; 288; LineStatus/Data; {'Line2': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:17.208; 289; MachineStatus/Data; {'CB4': ['BLOCKED', 'Line2']}
-16:23:17.221; 290; MachineStatus/Data; {'CB4_TO_WH': ['RUNNING', 'Line2']}
-16:23:17.222; 291; MachineStatus/Data; {'CB4_TO_CB5': ['BLOCKED', 'Line2']}
-16:23:17.222; 292; LineStatus/Data; {'Line2': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:17.234; 293; LineStatus/Data; {'Line2': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': None}}}
-16:23:17.243; 294; LineStatus/Data; {'Line2': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
-16:23:18.573; 295; MachineStatus/Data; {'CB3': ['FREE', 'None']}
-16:23:18.586; 296; LineStatus/Data; {'Line2': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
-16:23:18.673; 297; MachineStatus/Data; {'WH': ['BLOCKED', 'Line2']}
-16:23:18.686; 298; MachineStatus/Data; {'WH_STORE': ['RUNNING', 'Line2']}
-16:23:18.690; 299; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'END'}}}
-16:23:18.696; 300; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
-16:23:20.520; 301; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
-16:23:20.539; 302; MachineStatus/Data; {'CB4': ['FREE', 'None']}
-16:23:20.552; 303; MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
-16:23:20.552; 304; MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
-16:23:20.552; 305; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:25.695; 306; MachineStatus/Data; {'GR2': ['BLOCKED', 'Line3']}
-16:23:25.697; 307; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['RUNNING', 'Line3']}
-16:23:25.697; 308; MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line3']}
-16:23:25.697; 309; MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line3']}
-16:23:25.697; 310; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:25.697; 311; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'INIT'}}}
-16:23:25.920; 312; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:23:28.100; 313; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:28.119; 314; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'CB_FWD'}, 'VG1': {'status': 'INIT'}}}
-16:23:28.761; 315; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'INIT'}}}
-16:23:32.416; 316; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
-16:23:32.926; 317; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
-16:23:35.179; 318; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:23:38.160; 319; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
-16:23:38.172; 320; MachineStatus/Data; {'CB1': ['FREE', 'None']}
-16:23:38.194; 321; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
-16:23:39.638; 322; LineStatus/Data; {'Line2': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'INIT'}}}
-16:23:44.323; 323; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
-16:23:46.175; 324; LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
-16:23:46.713; 325; MachineStatus/Data; {'WH': ['FREE', 'None']}
-16:23:46.713; 326; MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
-16:23:46.730; 327; MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
-16:23:46.730; 328; LineStatus/Data; {'Line2': {'self': {'state': 'END', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'END'}}}
-16:23:46.748; 329; MachineStatus/Data; {'CB3': ['RUNNING', 'Line3']}
-16:23:46.748; 330; LineStatus/Data; {'Line2': {'self': {'state': 'END', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}}}
-16:23:46.748; 331; LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
-16:23:46.761; 332; MachineStatus/Data; {'WH': ['RUNNING', 'Line3']}
-16:23:46.762; 333; MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line3']}
-16:23:46.763; 334; MachineStatus/Data; {'WH_RETRIEVE': ['BLOCKED', 'Line3']}
-16:23:46.763; 335; LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
-16:23:46.921; 336; LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:50.059; 337; MachineStatus/Data; {'CB4': ['BLOCKED', 'Line3']}
-16:23:50.069; 338; MachineStatus/Data; {'CB4_TO_WH': ['RUNNING', 'Line3']}
-16:23:50.069; 339; MachineStatus/Data; {'CB4_TO_CB5': ['BLOCKED', 'Line3']}
-16:23:50.077; 340; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:50.084; 341; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': None}}}
-16:23:50.097; 342; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
-16:23:51.624; 343; MachineStatus/Data; {'CB3': ['FREE', 'None']}
-16:23:51.627; 344; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
-16:23:51.725; 345; MachineStatus/Data; {'WH': ['BLOCKED', 'Line3']}
-16:23:51.732; 346; MachineStatus/Data; {'WH_STORE': ['RUNNING', 'Line3']}
-16:23:51.732; 347; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'END'}}}
-16:23:51.747; 348; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
-16:23:53.592; 349; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
-16:23:53.614; 350; LineStatus/Data; {'Line2': {'self': {'state': 'END', 'product_at': 'WH'}, 'WH': {'status': 'END'}}}
-16:23:53.625; 351; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'END'}}}
-16:23:53.640; 352; FactoryStatus/Data; Stopped line: Line2
-16:23:53.640; 353; MachineStatus/Data; {'CB4': ['FREE', 'None']}
-16:23:53.662; 354; MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
-16:23:53.672; 355; MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
-16:23:53.673; 356; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:58.044; 357; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:23:58.601; 358; MachineStatus/Data; {'GR2': ['FREE', 'None']}
-16:23:58.607; 359; MachineStatus/Data; {'GR2_CB1_TO_CB3': ['FREE', 'None']}
-16:23:58.607; 360; MachineStatus/Data; {'GR2_CB1_TO_PM': ['FREE', 'None']}
-16:23:58.607; 361; MachineStatus/Data; {'GR2_PM_TO_CB3': ['FREE', 'None']}
-16:23:58.607; 362; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:04.883; 363; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:09.062; 364; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:12.836; 365; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:13.664; 366; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:16.533; 367; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:16.533; 368; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'CB_FWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:17.072; 369; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:20.736; 370; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:24.753; 371; LineStatus/Data; {'Line3': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:31.765; 372; MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line3']}
-16:24:31.778; 373; MachineStatus/Data; {'WH_RETRIEVE': ['RUNNING', 'Line3']}
-16:24:31.783; 374; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:31.796; 375; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:38.880; 376; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:43.035; 377; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:46.776; 378; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:24:47.581; 379; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'GET_PRODUCT'}}}
-16:24:50.845; 380; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_MOVING_POS'}}}
-16:24:55.246; 381; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'MOVING'}}}
-16:24:58.598; 382; LineStatus/Data; {'Line3': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'VG1'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
-16:25:01.883; 383; MachineStatus/Data; {'CB4': ['BLOCKED', 'Line3']}
-16:25:01.896; 384; MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line3']}
-16:25:01.897; 385; MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line3']}
-16:25:01.901; 386; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'VG1'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'INIT'}}}
-16:25:01.902; 387; MachineStatus/Data; {'WH': ['FREE', 'None']}
-16:25:01.902; 388; MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
-16:25:01.915; 389; MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
-16:25:01.915; 390; LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:25:04.957; 391; MachineStatus/Data; {'CB5': ['RUNNING', 'Line3']}
-16:25:04.969; 392; LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
-16:25:04.990; 393; MachineStatus/Data; {'GR3': ['RUNNING', 'Line3']}
-16:25:05.003; 394; LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
-16:25:05.194; 395; LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:25:06.125; 396; LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:25:06.645; 397; MachineStatus/Data; {'CB4': ['FREE', 'None']}
-16:25:06.658; 398; MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
-16:25:06.659; 399; MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
-16:25:06.662; 400; LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:25:10.284; 401; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:25:10.303; 402; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
-16:25:11.848; 403; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:25:13.982; 404; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
-16:25:14.004; 405; MachineStatus/Data; {'CB5': ['FREE', 'None']}
-16:25:14.013; 406; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
-16:25:19.728; 407; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
-16:25:20.914; 408; LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
-16:25:21.400; 409; MachineStatus/Data; {'SL': ['RUNNING', 'Line3']}
-16:25:21.412; 410; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
-16:25:21.424; 411; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
-16:25:21.438; 412; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
-16:25:24.354; 413; MachineStatus/Data; {'VG2': ['RUNNING', 'Line3']}
-16:25:24.366; 414; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
-16:25:24.577; 415; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:25:26.714; 416; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:25:27.182; 417; LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'MOVING'}}}
-16:25:28.666; 418; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'MOVING'}}}
-16:25:30.295; 419; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:25:31.021; 420; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
-16:25:32.426; 421; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
-16:25:32.442; 422; MachineStatus/Data; {'SL': ['FREE', 'None']}
-16:25:32.460; 423; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:25:32.705; 424; MachineStatus/Data; {'GR3': ['FREE', 'None']}
-16:25:32.722; 425; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
-16:25:33.168; 426; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'MOVING'}}}
-16:25:35.680; 427; LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
-16:25:37.209; 428; LineStatus/Data; {'Line3': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
-16:25:42.409; 429; LineStatus/Data; {'Line3': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'END'}}}
-16:25:42.429; 430; FactoryStatus/Data; Stopped line: Line3
-16:25:42.434; 431; FactoryStatus/Data; Program stopped
+14:00:12.311; 0; Start of recording
+14:00:13.311; 1; MiniFactory/Right/Factory/FactoryStatus/Data; {'status': 'Program started'}
+14:00:13.356; 2; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['FREE', 'None'], 'CB3': ['FREE', 'None'], 'CB4': ['FREE', 'None'], 'CB4_TO_WH': ['FREE', 'None'], 'CB4_TO_CB5': ['FREE', 'None'], 'CB5': ['FREE', 'None'], 'GR1': ['FREE', 'None'], 'GR2': ['FREE', 'None'], 'GR2_CB1_TO_CB3': ['FREE', 'None'], 'GR2_CB1_TO_PM': ['FREE', 'None'], 'GR2_PM_TO_CB3': ['FREE', 'None'], 'GR3': ['FREE', 'None'], 'VG1': ['FREE', 'None'], 'VG1_STORE': ['FREE', 'None'], 'VG1_RETRIEVE': ['FREE', 'None'], 'VG2': ['FREE', 'None'], 'MPS': ['FREE', 'None'], 'PM': ['FREE', 'None'], 'SL': ['FREE', 'None'], 'WH': ['FREE', 'None'], 'WH_STORE': ['FREE', 'None'], 'WH_RETRIEVE': ['FREE', 'None'], 'WAITING': ['FREE', 'None'], 'TEST': ['FREE', 'None']}
+14:00:14.223; 3; MiniFactory/Right/Factory/WHContent/Set; [['WHITE', 'RED', 'BLUE'], ['Carrier', 'Carrier', 'Empty'], ['Empty', 'Empty', 'Empty']]
+14:00:14.272; 4; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Init', 'run': True, 'start_at': 'INIT', 'end_at': 'END'}
+14:00:14.272; 5; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line1', 'run': True, 'start_at': 'start', 'end_at': 'end', 'with_oven': True, 'with_saw': True, 'color': 'WHITE'}
+14:00:14.272; 6; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line2s', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_saw': True, 'with_PM': True, 'color': 'RED'}
+14:00:14.272; 7; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line2w', 'run': True, 'start_at': 'storage', 'end_at': 'end', 'color': 'RED', 'start_when': 'Line2s'}
+14:00:14.272; 8; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line3', 'run': True, 'start_at': 'start', 'end_at': 'end', 'color': 'BLUE'}
+14:00:14.272; 9; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line4w', 'run': True, 'start_at': 'storage', 'end_at': 'END', 'color': 'RED', 'end_int': True}
+14:00:14.272; 10; MiniFactory/Right/Factory/LineConfig/Set; {'name': 'Line4s', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_oven': True, 'color': 'RED', 'start_int': True, 'start_when': 'Line4w'}
+14:00:14.322; 11; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Init', 'run': True, 'start_at': 'INIT', 'end_at': 'END'}}
+14:00:14.322; 12; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line1', 'run': True, 'start_at': 'start', 'end_at': 'end', 'with_oven': True, 'with_saw': True, 'color': 'WHITE'}}
+14:00:14.322; 13; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line2s', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_saw': True, 'with_PM': True, 'color': 'RED'}}
+14:00:14.334; 14; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line2w', 'run': True, 'start_at': 'storage', 'end_at': 'end', 'color': 'RED', 'start_when': 'Line2s'}}
+14:00:14.335; 15; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line3', 'run': True, 'start_at': 'start', 'end_at': 'end', 'color': 'BLUE'}}
+14:00:14.336; 16; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line4w', 'run': True, 'start_at': 'storage', 'end_at': 'END', 'color': 'RED', 'end_int': True}}
+14:00:14.338; 17; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_added': {'name': 'Line4s', 'run': True, 'start_at': 'start', 'end_at': 'storage', 'with_oven': True, 'color': 'RED', 'start_int': True, 'start_when': 'Line4w'}}
+14:00:14.339; 18; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.341; 19; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.341; 20; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.341; 21; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.344; 22; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.345; 23; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.379; 24; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'INIT', 'product_at': None}}}
+14:00:14.720; 25; MiniFactory/Right/Factory/FactoryCommand/Set; {'run': True}
+14:00:14.763; 26; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Init', 'at': 'INIT'}}
+14:00:14.821; 27; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'GR2': {'status': 'INIT'}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}, 'WH': {'status': 'INIT'}}}
+14:00:15.140; 28; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'GR2': {'status': 'INIT'}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
+14:00:15.202; 29; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR2': {'status': 'INIT'}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
+14:00:15.252; 30; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'GR3': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
+14:00:15.252; 31; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'VG1': {'status': 'INIT'}, 'VG2': {'status': 'INIT'}}}
+14:00:15.302; 32; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'INIT', 'product_at': None}, 'VG2': {'status': 'INIT'}}}
+14:00:15.302; 33; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'END', 'product_at': None}}}
+14:00:15.302; 34; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Init', 'at': 'END'}}
+14:00:15.302; 35; MiniFactory/Right/Factory/LineStatus/Data; {'Init': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:00:15.352; 36; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Init'}
+14:00:15.352; 37; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line1', 'at': 'GR1'}}
+14:00:15.352; 38; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line2s', 'at': 'GR1'}}
+14:00:15.352; 39; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line3', 'at': 'GR1'}}
+14:00:15.352; 40; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line4w', 'at': 'WH_RETRIEVE'}}
+14:00:15.352; 41; MiniFactory/Right/Factory/MachineStatus/Data; {'GR1': ['RUNNING', 'Line1']}
+14:00:15.352; 42; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['BLOCKED', 'Line4w']}
+14:00:15.352; 43; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line4w']}
+14:00:15.352; 44; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['RUNNING', 'Line4w']}
+14:00:15.352; 45; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}}}
+14:00:15.352; 46; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'GR1'}}
+14:00:15.364; 47; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'GR1'}}
+14:00:15.402; 48; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': None}}}
+14:00:15.402; 49; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['RUNNING', 'Line4w']}
+14:00:15.402; 50; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['BLOCKED', 'Line4w']}
+14:00:15.402; 51; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['BLOCKED', 'Line4w']}
+14:00:15.402; 52; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['RUNNING', 'Line1']}
+14:00:15.402; 53; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
+14:00:15.402; 54; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': None}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:00:15.570; 55; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:00:15.620; 56; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
+14:00:15.620; 57; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}, 'MPS': {'status': 'INIT'}}}
+14:00:15.669; 58; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:19.989; 59; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:24.229; 60; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}, 'MPS': {'status': 'INIT'}}}
+14:00:24.992; 61; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}, 'MPS': {'status': 'INIT'}}}
+14:00:25.047; 62; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}, 'MPS': {'status': 'INIT'}}}
+14:00:26.898; 63; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:31.234; 64; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}, 'MPS': {'status': 'INIT'}}}
+14:00:31.288; 65; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:31.329; 66; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}, 'MPS': {'status': 'INIT'}}}
+14:00:32.361; 67; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}, 'MPS': {'status': 'INIT'}}}
+14:00:34.916; 68; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:35.718; 69; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['BLOCKED', 'Line4w']}
+14:00:35.772; 70; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['RUNNING', 'Line4w']}
+14:00:35.773; 71; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:35.773; 72; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'GET_PRODUCT'}}}
+14:00:37.031; 73; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'GRIPPING'}}}
+14:00:39.028; 74; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:40.187; 75; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}, 'MPS': {'status': 'INIT'}}}
+14:00:41.010; 76; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
+14:00:41.066; 77; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
+14:00:41.067; 78; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'OVEN'}}}
+14:00:43.317; 79; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:00:44.202; 80; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'RELEASE'}}}
+14:00:44.252; 81; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line4w']}
+14:00:44.252; 82; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line4w']}
+14:00:44.252; 83; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line4w']}
+14:00:44.252; 84; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'VG1'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'INIT'}}}
+14:00:44.258; 85; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['FREE', 'None']}
+14:00:44.259; 86; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
+14:00:44.260; 87; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
+14:00:44.261; 88; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:00:47.357; 89; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['RUNNING', 'Line4w']}
+14:00:47.410; 90; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:00:47.410; 91; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['RUNNING', 'Line4w']}
+14:00:47.410; 92; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
+14:00:47.603; 93; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:00:48.516; 94; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['FREE', 'None']}
+14:00:48.574; 95; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['FREE', 'None']}
+14:00:48.574; 96; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['FREE', 'None']}
+14:00:48.576; 97; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:00:48.625; 98; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:00:48.674; 99; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:00:48.675; 100; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:00:48.676; 101; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:00:49.329; 102; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:00:50.442; 103; MiniFactory/Right/Factory/MachineStatus/Data; {'GR1': ['RUNNING', 'Line2s']}
+14:00:50.491; 104; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:00:50.492; 105; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
+14:00:50.652; 106; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:00:52.293; 107; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:00:52.348; 108; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
+14:00:53.861; 109; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:00:56.085; 110; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:00:56.139; 111; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['FREE', 'None']}
+14:00:56.140; 112; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
+14:00:59.214; 113; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}}}
+14:01:00.015; 114; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}}}
+14:01:00.071; 115; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_SAW'}}}
+14:01:00.071; 116; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:01:01.630; 117; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'SAWING'}}}
+14:01:01.926; 118; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:03.069; 119; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
+14:01:03.556; 120; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['RUNNING', 'Line4w']}
+14:01:03.626; 121; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
+14:01:03.626; 122; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
+14:01:03.626; 123; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
+14:01:03.626; 124; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
+14:01:04.906; 125; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:01:05.892; 126; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['RUNNING', 'Line1']}
+14:01:05.944; 127; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:01:05.944; 128; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['RUNNING', 'Line1']}
+14:01:05.945; 129; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['BLOCKED', 'Line1']}
+14:01:05.946; 130; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line1']}
+14:01:05.947; 131; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line1']}
+14:01:05.948; 132; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'INIT'}}}
+14:01:06.155; 133; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:06.242; 134; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}}}
+14:01:06.326; 135; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}}}
+14:01:06.520; 136; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['RUNNING', 'Line4w']}
+14:01:06.574; 137; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
+14:01:06.722; 138; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:07.348; 139; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:01:07.462; 140; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['FREE', 'None']}
+14:01:07.508; 141; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:07.941; 142; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:08.962; 143; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:01:09.652; 144; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:01:09.700; 145; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
+14:01:10.265; 146; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:01:10.859; 147; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['BLOCKED', 'Line1']}
+14:01:10.910; 148; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['RUNNING', 'Line1']}
+14:01:10.910; 149; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:11.208; 150; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:01:11.269; 151; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['FREE', 'None']}
+14:01:11.269; 152; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:11.909; 153; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
+14:01:13.239; 154; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
+14:01:14.978; 155; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['FREE', 'None']}
+14:01:15.033; 156; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'MOVING'}}}
+14:01:15.214; 157; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}}}
+14:01:15.538; 158; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:01:16.045; 159; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['RUNNING', 'Line2s']}
+14:01:16.099; 160; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}}}
+14:01:16.099; 161; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
+14:01:16.099; 162; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
+14:01:16.149; 163; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:01:18.693; 164; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:01:18.747; 165; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['FREE', 'None']}
+14:01:18.747; 166; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
+14:01:20.070; 167; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'RELEASE'}}}
+14:01:20.125; 168; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:01:22.129; 169; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
+14:01:22.179; 170; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line4w', 'at': 'END'}}
+14:01:22.180; 171; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line4s', 'at': 'GR1'}}
+14:01:22.181; 172; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'END', 'product_at': 'END'}, 'VG2': {'status': 'INIT'}}}
+14:01:22.183; 173; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'GR1'}}
+14:01:24.268; 174; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:01:24.836; 175; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:25.538; 176; MiniFactory/Right/Factory/MachineStatus/Data; {'GR1': ['RUNNING', 'Line3']}
+14:01:25.582; 177; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:01:25.582; 178; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
+14:01:25.748; 179; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:01:26.714; 180; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
+14:01:27.248; 181; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['RUNNING', 'Line1']}
+14:01:27.314; 182; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
+14:01:27.315; 183; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': None}}}
+14:01:27.316; 184; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
+14:01:30.692; 185; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line1']}
+14:01:30.738; 186; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line1']}
+14:01:30.738; 187; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line1']}
+14:01:30.738; 188; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
+14:01:30.738; 189; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': None}}}
+14:01:30.738; 190; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': 'RUN'}}}
+14:01:32.260; 191; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['FREE', 'None']}
+14:01:32.305; 192; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:01:32.445; 193; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['FREE', 'None']}
+14:01:32.487; 194; MiniFactory/Right/Factory/LineStatus/Data; {'Line4w': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:01:32.488; 195; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line4w'}
+14:01:34.295; 196; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}}}
+14:01:34.971; 197; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_SAW'}}}
+14:01:35.074; 198; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}}}
+14:01:35.119; 199; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:01:35.395; 200; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['RUNNING', 'Line1']}
+14:01:35.448; 201; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:01:35.448; 202; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['RUNNING', 'Line1']}
+14:01:35.448; 203; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
+14:01:35.629; 204; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:36.520; 205; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'SAWING'}}}
+14:01:37.132; 206; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:01:37.202; 207; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:01:37.203; 208; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:01:37.204; 209; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:38.527; 210; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
+14:01:39.333; 211; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['FREE', 'None']}
+14:01:39.387; 212; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['FREE', 'None']}
+14:01:39.387; 213; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['FREE', 'None']}
+14:01:39.387; 214; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['FREE', 'None']}
+14:01:39.387; 215; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:39.781; 216; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:01:40.641; 217; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['RUNNING', 'Line2s']}
+14:01:40.694; 218; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:01:40.694; 219; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['RUNNING', 'Line2s']}
+14:01:40.694; 220; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['BLOCKED', 'Line2s']}
+14:01:40.694; 221; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line2s']}
+14:01:40.694; 222; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line2s']}
+14:01:40.694; 223; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'INIT'}}}
+14:01:40.777; 224; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:40.830; 225; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
+14:01:40.881; 226; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:41.300; 227; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}}}
+14:01:41.363; 228; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}}}
+14:01:42.083; 229; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['FREE', 'None']}
+14:01:42.133; 230; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:42.322; 231; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:01:42.381; 232; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:01:44.513; 233; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:01:44.566; 234; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['FREE', 'None']}
+14:01:44.566; 235; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
+14:01:45.484; 236; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['BLOCKED', 'Line2s']}
+14:01:45.532; 237; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['RUNNING', 'Line2s']}
+14:01:45.533; 238; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:01:47.891; 239; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
+14:01:50.167; 240; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:01:50.211; 241; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}}}
+14:01:50.366; 242; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:01:50.983; 243; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['RUNNING', 'Line3']}
+14:01:51.053; 244; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}}}
+14:01:51.054; 245; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
+14:01:51.055; 246; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
+14:01:51.484; 247; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
+14:01:51.999; 248; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['RUNNING', 'Line1']}
+14:01:52.053; 249; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
+14:01:52.054; 250; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
+14:01:52.055; 251; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
+14:01:53.326; 252; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:01:53.372; 253; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['FREE', 'None']}
+14:01:53.374; 254; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
+14:01:55.024; 255; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}}}
+14:01:55.072; 256; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['RUNNING', 'Line1']}
+14:01:55.072; 257; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
+14:01:55.263; 258; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:55.431; 259; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:57.123; 260; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:57.163; 261; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:01:57.704; 262; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:01:58.284; 263; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
+14:01:58.879; 264; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:01:59.192; 265; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:01:59.929; 266; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:01:59.977; 267; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['FREE', 'None']}
+14:01:59.977; 268; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:02:00.475; 269; MiniFactory/Right/Factory/MachineStatus/Data; {'GR1': ['RUNNING', 'Line4s']}
+14:02:00.531; 270; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:02:00.532; 271; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'INIT'}}}
+14:02:00.579; 272; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
+14:02:00.699; 273; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:02:01.652; 274; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:02:02.846; 275; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:02:03.337; 276; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['FREE', 'None']}
+14:02:03.390; 277; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:02:03.556; 278; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_CB1_TO_PM', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
+14:02:04.100; 279; MiniFactory/Right/Factory/MachineStatus/Data; {'PM': ['RUNNING', 'Line2s']}
+14:02:04.147; 280; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_MOVING_POS'}}}
+14:02:04.147; 281; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line2s']}
+14:02:04.147; 282; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['WAITING', 'Line2s']}
+14:02:04.147; 283; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_MOVING_POS'}, 'PM': {'status': None}, 'CB2': {'status': 'RUN'}}}
+14:02:04.926; 284; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
+14:02:04.977; 285; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line1', 'at': 'END'}}
+14:02:04.978; 286; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'END', 'product_at': 'END'}, 'VG2': {'status': 'INIT'}}}
+14:02:06.243; 287; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'MOVING'}, 'PM': {'status': None}, 'CB2': {'status': 'RUN'}}}
+14:02:07.545; 288; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'MOVING'}, 'PM': {'status': 'CB_TO_PUNCH'}, 'CB2': {'status': 'RUN'}}}
+14:02:07.750; 289; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_PUNCH'}, 'CB2': {'status': 'RUN'}}}
+14:02:09.184; 290; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': None}, 'GR1': {'status': 'GRIPPING'}}}
+14:02:09.647; 291; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['FREE', 'None']}
+14:02:09.647; 292; MiniFactory/Right/Factory/LineStatus/Data; {'Line1': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:02:09.702; 293; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line1'}
+14:02:09.898; 294; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
+14:02:10.008; 295; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'GRIPPING'}}}
+14:02:10.055; 296; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:02:11.993; 297; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'PUNCHING'}, 'CB2': {'status': 'RUN'}}}
+14:02:12.619; 298; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'PM'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_OUT'}, 'CB2': {'status': 'RUN'}}}
+14:02:12.742; 299; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:02:13.750; 300; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['RUNNING', 'Line3']}
+14:02:13.803; 301; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:02:13.804; 302; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': None}}}
+14:02:13.805; 303; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}}}
+14:02:15.173; 304; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['FREE', 'None']}
+14:02:15.224; 305; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}}}
+14:02:15.316; 306; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'PM', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'CB_TO_OUT'}, 'CB2': {'status': 'RUN'}}}
+14:02:16.191; 307; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_MOVING_POS'}}}
+14:02:16.281; 308; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'MOVING'}}}
+14:02:17.319; 309; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'TO_DESTINATION'}}}
+14:02:18.561; 310; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['WAITING', 'Line3']}
+14:02:18.628; 311; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'waiting_for': 'GR2_CB1_TO_CB3', 'CB1': {'status': 'END'}}}
+14:02:19.935; 312; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['RUNNING', 'Line2s']}
+14:02:19.984; 313; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'TO_DESTINATION'}, 'PM': {'status': 'END'}, 'CB2': {'status': 'END'}}}
+14:02:19.984; 314; MiniFactory/Right/Factory/MachineStatus/Data; {'PM': ['FREE', 'None']}
+14:02:19.984; 315; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'GET_PRODUCT'}, 'CB2': {'status': 'END'}}}
+14:02:21.835; 316; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'CB2'}, 'GR2': {'status': 'GRIPPING'}, 'CB2': {'status': 'END'}}}
+14:02:24.392; 317; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'GRIPPING'}, 'CB2': {'status': 'END'}}}
+14:02:24.441; 318; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
+14:02:25.093; 319; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR1', 'product_at': 'GR1'}, 'GR1': {'status': 'RELEASE'}}}
+14:02:25.937; 320; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['RUNNING', 'Line4s']}
+14:02:25.988; 321; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}}}
+14:02:25.989; 322; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'GR1'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'INIT'}}}
+14:02:25.990; 323; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'START'}}}
+14:02:25.991; 324; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'OVEN'}}}
+14:02:28.834; 325; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:02:30.717; 326; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'GR2_PM_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
+14:02:31.193; 327; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['RUNNING', 'Line2s']}
+14:02:31.235; 328; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
+14:02:31.236; 329; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['RUNNING', 'Line2s']}
+14:02:31.236; 330; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['BLOCKED', 'Line2s']}
+14:02:31.237; 331; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['BLOCKED', 'Line2s']}
+14:02:31.238; 332; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['RUNNING', 'Line2s']}
+14:02:31.239; 333; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line2s']}
+14:02:31.240; 334; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['BLOCKED', 'Line2s']}
+14:02:31.291; 335; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:02:31.340; 336; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:02:31.466; 337; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:02:34.076; 338; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'GR1': {'status': 'INIT'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:02:35.384; 339; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line2s']}
+14:02:35.448; 340; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['RUNNING', 'Line2s']}
+14:02:35.449; 341; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['BLOCKED', 'Line2s']}
+14:02:35.450; 342; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:02:35.452; 343; MiniFactory/Right/Factory/MachineStatus/Data; {'GR1': ['FREE', 'None']}
+14:02:35.452; 344; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
+14:02:35.454; 345; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_TABLE'}}}
+14:02:36.982; 346; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['FREE', 'None']}
+14:02:37.032; 347; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
+14:02:37.086; 348; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['BLOCKED', 'Line2s']}
+14:02:37.086; 349; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['RUNNING', 'Line2s']}
+14:02:37.086; 350; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'END'}}}
+14:02:37.136; 351; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
+14:02:37.806; 352; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GRIPPING'}, 'CB4': {'status': 'END'}}}
+14:02:38.924; 353; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GRIPPING'}, 'CB4': {'status': 'END'}}}
+14:02:38.978; 354; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:02:38.978; 355; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:02:38.978; 356; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:02:38.978; 357; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:02:43.202; 358; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['BLOCKED', 'Line3']}
+14:02:43.262; 359; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['RUNNING', 'Line3']}
+14:02:43.264; 360; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line3']}
+14:02:43.265; 361; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line3']}
+14:02:43.266; 362; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:02:43.266; 363; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'INIT'}}}
+14:02:43.420; 364; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:02:44.712; 365; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'TO_CB'}}}
+14:02:44.900; 366; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'RELEASE'}}}
+14:02:44.955; 367; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['BLOCKED', 'Line2s']}
+14:02:44.955; 368; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['RUNNING', 'Line2s']}
+14:02:44.955; 369; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:02:44.955; 370; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:02:45.004; 371; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'CB_FWD'}, 'VG1': {'status': 'INIT'}}}
+14:02:45.616; 372; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'INIT'}}}
+14:02:47.541; 373; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'MPS', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:02:49.276; 374; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
+14:02:50.457; 375; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
+14:02:50.788; 376; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['FREE', 'None']}
+14:02:50.839; 377; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['FREE', 'None']}
+14:02:50.840; 378; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['FREE', 'None']}
+14:02:50.840; 379; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}}}
+14:02:52.728; 380; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:02:53.418; 381; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}}}
+14:02:55.877; 382; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:02:55.917; 383; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['RUNNING', 'Line4s']}
+14:02:55.918; 384; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
+14:02:55.919; 385; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB1', 'product_at': 'MPS'}, 'MPS': {'status': 'CB'}}}
+14:02:55.921; 386; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': None}}}
+14:02:55.964; 387; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'MPS': {'status': 'CB'}, 'CB1': {'status': 'RUN'}}}
+14:02:56.819; 388; MiniFactory/Right/Factory/MachineStatus/Data; {'MPS': ['FREE', 'None']}
+14:02:56.869; 389; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'CB1': {'status': 'RUN'}}}
+14:03:00.170; 390; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['WAITING', 'Line4s']}
+14:03:00.226; 391; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB1', 'product_at': 'CB1'}, 'waiting_for': 'GR2_CB1_TO_CB3', 'CB1': {'status': 'END'}}}
+14:03:00.277; 392; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'END', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}}}
+14:03:00.327; 393; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line2s', 'at': 'WH_STORE'}}
+14:03:00.328; 394; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_started': {'name': 'Line2w', 'at': 'WH_RETRIEVE'}}
+14:03:00.329; 395; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'END', 'product_at': 'END'}, 'WH': {'status': 'INIT'}}}
+14:03:00.329; 396; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'INIT', 'product_at': None}, 'waiting_for': 'WH_RETRIEVE'}}
+14:03:02.004; 397; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:03:03.851; 398; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
+14:03:04.400; 399; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['RUNNING', 'Line3']}
+14:03:04.454; 400; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
+14:03:04.454; 401; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': None}}}
+14:03:04.454; 402; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
+14:03:04.521; 403; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['RUNNING', 'Line2w']}
+14:03:04.574; 404; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['BLOCKED', 'Line2w']}
+14:03:04.577; 405; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['BLOCKED', 'Line2w']}
+14:03:04.577; 406; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['BLOCKED', 'Line2w']}
+14:03:04.577; 407; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line2w']}
+14:03:04.581; 408; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['RUNNING', 'Line2w']}
+14:03:04.581; 409; MiniFactory/Right/Factory/LineStatus/Data; {'Line2s': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:03:04.582; 410; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': None}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:03:04.583; 411; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line2s'}
+14:03:04.703; 412; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:03:04.754; 413; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
+14:03:04.756; 414; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:07.818; 415; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line3']}
+14:03:07.872; 416; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line3']}
+14:03:07.874; 417; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line3']}
+14:03:07.874; 418; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
+14:03:07.875; 419; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': None}}}
+14:03:07.876; 420; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'CB4': {'status': 'RUN'}}}
+14:03:09.111; 421; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:09.470; 422; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['FREE', 'None']}
+14:03:09.519; 423; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:03:12.626; 424; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['RUNNING', 'Line3']}
+14:03:12.681; 425; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:03:12.681; 426; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['RUNNING', 'Line3']}
+14:03:12.681; 427; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
+14:03:12.861; 428; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:13.926; 429; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:03:13.979; 430; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:03:13.979; 431; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:03:13.979; 432; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'GR2': {'status': 'INIT'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:16.025; 433; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:16.443; 434; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['BLOCKED', 'Line4s']}
+14:03:16.514; 435; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['RUNNING', 'Line4s']}
+14:03:16.515; 436; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['BLOCKED', 'Line4s']}
+14:03:16.516; 437; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['BLOCKED', 'Line4s']}
+14:03:16.516; 438; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:16.518; 439; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'INIT'}}}
+14:03:16.658; 440; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:03:17.532; 441; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:17.578; 442; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
+14:03:19.088; 443; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:03:20.443; 444; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:21.367; 445; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:03:21.429; 446; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['FREE', 'None']}
+14:03:21.430; 447; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
+14:03:23.694; 448; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GET_PRODUCT'}}}
+14:03:24.084; 449; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'WH_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'CB_BWD'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:24.864; 450; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['BLOCKED', 'Line2w']}
+14:03:24.922; 451; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['RUNNING', 'Line2w']}
+14:03:24.923; 452; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:24.925; 453; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'GET_PRODUCT'}}}
+14:03:25.929; 454; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'CB1'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:03:26.162; 455; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'GRIPPING'}}}
+14:03:27.196; 456; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:28.199; 457; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:28.362; 458; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
+14:03:28.842; 459; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['RUNNING', 'Line3']}
+14:03:28.891; 460; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
+14:03:28.891; 461; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
+14:03:28.891; 462; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
+14:03:29.065; 463; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'CB1': {'status': 'END'}, 'GR2': {'status': 'GRIPPING'}}}
+14:03:29.129; 464; MiniFactory/Right/Factory/MachineStatus/Data; {'CB1': ['FREE', 'None']}
+14:03:29.135; 465; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'MOVING'}}}
+14:03:31.820; 466; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['RUNNING', 'Line3']}
+14:03:31.868; 467; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
+14:03:32.040; 468; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:03:32.398; 469; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:33.467; 470; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG1_RETRIEVE', 'product_at': 'WH'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'RELEASE'}}}
+14:03:33.515; 471; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line2w']}
+14:03:33.516; 472; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['BLOCKED', 'Line2w']}
+14:03:33.517; 473; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['RUNNING', 'Line2w']}
+14:03:33.518; 474; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'VG1'}, 'WH': {'status': 'END'}, 'VG1': {'status': 'INIT'}}}
+14:03:33.519; 475; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['FREE', 'None']}
+14:03:33.570; 476; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
+14:03:33.570; 477; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
+14:03:33.570; 478; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB4_TO_CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:03:33.930; 479; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:03:35.050; 480; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:03:35.177; 481; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'TO_DESTINATION'}}}
+14:03:35.621; 482; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:03:35.677; 483; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:03:35.677; 484; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
+14:03:36.237; 485; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:03:36.687; 486; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['RUNNING', 'Line2w']}
+14:03:36.729; 487; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB4'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}}}
+14:03:36.730; 488; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': None}}}
+14:03:36.731; 489; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'VG1': {'status': 'INIT'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}}}
+14:03:37.045; 490; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'GR2_CB1_TO_CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'RELEASE'}}}
+14:03:37.287; 491; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:03:37.342; 492; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['FREE', 'None']}
+14:03:37.342; 493; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:03:37.601; 494; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['RUNNING', 'Line4s']}
+14:03:37.659; 495; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'GR2'}, 'GR2': {'status': 'INIT'}}}
+14:03:37.660; 496; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': None}}}
+14:03:37.661; 497; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}}}
+14:03:37.727; 498; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['RUNNING', 'Line4s']}
+14:03:37.798; 499; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['BLOCKED', 'Line4s']}
+14:03:37.799; 500; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['BLOCKED', 'Line4s']}
+14:03:37.799; 501; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['RUNNING', 'Line4s']}
+14:03:37.799; 502; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['BLOCKED', 'Line4s']}
+14:03:37.799; 503; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['BLOCKED', 'Line4s']}
+14:03:37.799; 504; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB4': {'status': 'RUN'}, 'CB5': {'status': 'RUN'}}}
+14:03:37.799; 505; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'INIT'}, 'VG1': {'status': 'INIT'}}}
+14:03:37.898; 506; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
+14:03:37.942; 507; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:03:37.993; 508; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB3', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:38.140; 509; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:03:38.193; 510; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:03:38.194; 511; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:03:38.194; 512; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}}}
+14:03:40.185; 513; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['FREE', 'None']}
+14:03:40.240; 514; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'MOVING'}}}
+14:03:40.242; 515; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['RUNNING', 'Line2w']}
+14:03:40.244; 516; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'INIT'}}}
+14:03:40.404; 517; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:03:40.469; 518; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'CB5', 'product_at': 'CB5'}, 'CB5': {'status': 'RUN'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:41.078; 519; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['BLOCKED', 'Line4s']}
+14:03:41.127; 520; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['RUNNING', 'Line4s']}
+14:03:41.128; 521; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['BLOCKED', 'Line4s']}
+14:03:41.129; 522; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB3'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:41.131; 523; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': None}}}
+14:03:41.131; 524; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'CB3': {'status': 'RUN'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
+14:03:41.707; 525; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:42.222; 526; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'RELEASE'}}}
+14:03:42.266; 527; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:03:42.450; 528; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
+14:03:42.508; 529; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line3', 'at': 'END'}}
+14:03:42.509; 530; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'END', 'product_at': 'END'}, 'VG2': {'status': 'INIT'}}}
+14:03:42.652; 531; MiniFactory/Right/Factory/MachineStatus/Data; {'CB3': ['FREE', 'None']}
+14:03:42.705; 532; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'CB4_TO_WH', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'RUN'}}}
+14:03:42.762; 533; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['BLOCKED', 'Line4s']}
+14:03:42.806; 534; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['RUNNING', 'Line4s']}
+14:03:42.807; 535; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}, 'CB4': {'status': 'END'}}}
+14:03:42.808; 536; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GET_PRODUCT'}, 'CB4': {'status': 'END'}}}
+14:03:43.477; 537; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'CB4'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GRIPPING'}, 'CB4': {'status': 'END'}}}
+14:03:44.547; 538; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'GRIPPING'}, 'CB4': {'status': 'END'}}}
+14:03:44.602; 539; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4': ['FREE', 'None']}
+14:03:44.602; 540; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_WH': ['FREE', 'None']}
+14:03:44.602; 541; MiniFactory/Right/Factory/MachineStatus/Data; {'CB4_TO_CB5': ['FREE', 'None']}
+14:03:44.602; 542; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'GR2': {'status': 'INIT'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:44.650; 543; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GET_PRODUCT'}}}
+14:03:46.174; 544; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'CB5'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:03:47.222; 545; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['FREE', 'None']}
+14:03:47.269; 546; MiniFactory/Right/Factory/LineStatus/Data; {'Line3': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:03:47.269; 547; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line3'}
+14:03:48.428; 548; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'CB5': {'status': 'END'}, 'GR3': {'status': 'GRIPPING'}}}
+14:03:48.474; 549; MiniFactory/Right/Factory/MachineStatus/Data; {'CB5': ['FREE', 'None']}
+14:03:48.474; 550; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'MOVING'}}}
+14:03:49.493; 551; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2': ['FREE', 'None']}
+14:03:49.549; 552; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_CB3': ['FREE', 'None']}
+14:03:49.550; 553; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_CB1_TO_PM': ['FREE', 'None']}
+14:03:49.551; 554; MiniFactory/Right/Factory/MachineStatus/Data; {'GR2_PM_TO_CB3': ['FREE', 'None']}
+14:03:49.552; 555; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'TO_DESTINATION'}}}
+14:03:50.510; 556; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'VG1_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'RELEASE'}}}
+14:03:50.564; 557; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['BLOCKED', 'Line4s']}
+14:03:50.566; 558; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['RUNNING', 'Line4s']}
+14:03:50.567; 559; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'VG1'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:03:50.568; 560; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_CB'}, 'VG1': {'status': 'INIT'}}}
+14:03:50.606; 561; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'CB_FWD'}, 'VG1': {'status': 'INIT'}}}
+14:03:51.264; 562; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'GETTING_PRODUCT'}, 'VG1': {'status': 'INIT'}}}
+14:03:54.255; 563; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'TO_DESTINATION'}}}
+14:03:54.897; 564; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}, 'VG1': {'status': 'INIT'}}}
+14:03:55.414; 565; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'GR3', 'product_at': 'GR3'}, 'GR3': {'status': 'RELEASE'}}}
+14:03:55.900; 566; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['RUNNING', 'Line2w']}
+14:03:55.955; 567; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'GR3'}, 'GR3': {'status': 'INIT'}}}
+14:03:55.958; 568; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'START'}}}
+14:03:55.959; 569; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'COLOR_SENSING'}}}
+14:03:56.416; 570; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1': ['FREE', 'None']}
+14:03:56.479; 571; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_STORE': ['FREE', 'None']}
+14:03:56.480; 572; MiniFactory/Right/Factory/MachineStatus/Data; {'VG1_RETRIEVE': ['FREE', 'None']}
+14:03:56.481; 573; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'MOVING_TO_RACK'}}}
+14:03:59.043; 574; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['RUNNING', 'Line2w']}
+14:03:59.097; 575; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'INIT'}}}
+14:03:59.097; 576; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'WH_STORE', 'product_at': 'WH'}, 'WH': {'status': 'SETTING_PRODUCT'}}}
+14:03:59.259; 577; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'SORTING'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:04:00.256; 578; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:04:01.463; 579; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'MOVING'}}}
+14:04:01.521; 580; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'SL', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'INTO_BAY'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:04:01.969; 581; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:04:02.056; 582; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GET_PRODUCT'}}}
+14:04:02.638; 583; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'SL'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:04:03.673; 584; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'SL': {'status': 'END'}, 'VG2': {'status': 'GRIPPING'}}}
+14:04:03.729; 585; MiniFactory/Right/Factory/MachineStatus/Data; {'SL': ['FREE', 'None']}
+14:04:03.729; 586; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_MOVING_POS'}}}
+14:04:04.265; 587; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'MOVING'}}}
+14:04:05.879; 588; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'END', 'product_at': 'WH'}, 'WH': {'status': 'INIT'}}}
+14:04:05.938; 589; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line4s', 'at': 'WH_STORE'}}
+14:04:05.939; 590; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'END', 'product_at': 'END'}, 'WH': {'status': 'INIT'}}}
+14:04:06.193; 591; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'GR3': {'status': 'INIT'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:04:07.246; 592; MiniFactory/Right/Factory/MachineStatus/Data; {'GR3': ['FREE', 'None']}
+14:04:07.316; 593; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:04:08.010; 594; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'RELEASE'}}}
+14:04:08.067; 595; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'VG2', 'product_at': 'VG2'}, 'VG2': {'status': 'TO_DESTINATION'}}}
+14:04:08.261; 596; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'END', 'product_at': 'VG2'}, 'VG2': {'status': 'INIT'}}}
+14:04:08.315; 597; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_ended': {'name': 'Line2w', 'at': 'END'}}
+14:04:08.315; 598; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'END', 'product_at': 'END'}, 'VG2': {'status': 'INIT'}}}
+14:04:10.078; 599; MiniFactory/Right/Factory/MachineStatus/Data; {'WH': ['FREE', 'None']}
+14:04:10.147; 600; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_STORE': ['FREE', 'None']}
+14:04:10.147; 601; MiniFactory/Right/Factory/MachineStatus/Data; {'WH_RETRIEVE': ['FREE', 'None']}
+14:04:10.147; 602; MiniFactory/Right/Factory/LineStatus/Data; {'Line4s': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:04:10.147; 603; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line4s'}
+14:04:12.914; 604; MiniFactory/Right/Factory/MachineStatus/Data; {'VG2': ['FREE', 'None']}
+14:04:12.983; 605; MiniFactory/Right/Factory/LineStatus/Data; {'Line2w': {'self': {'state': 'END', 'product_at': 'END'}}}
+14:04:12.984; 606; MiniFactory/Right/Factory/FactoryStatus/Data; {'line_stopped': 'Line2w'}
+14:04:14.586; 607; MiniFactory/Right/Factory/FactoryCommand/Set; {'stop': True}
+14:04:14.636; 608; MiniFactory/Right/Factory/FactoryCommand/Data; {'stop': True}
+14:04:14.636; 609; MiniFactory/Right/Factory/FactoryStatus/Data; {'status': 'Program stopped'}

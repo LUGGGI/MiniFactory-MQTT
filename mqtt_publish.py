@@ -30,7 +30,6 @@ line_configs1 = [
         "color": "WHITE",
         "start_when": "Line1s",
     },
-
 ]
 
 line_configs4 = [
@@ -44,38 +43,52 @@ line_configs4 = [
         "name": "Line1", 
         "run": True,
         "start_at": "start",
-        "end_at": "END",
+        "end_at": "end",
         "with_oven": True,
         "with_saw": True,
-        "with_PM": False,
-        "with_WH": False,
-        "color": "WHITE"
+        "color": "WHITE",
     },
     {
-        "name": "Line2", 
+        "name": "Line2s", 
         "run": True,
         "start_at": "start",
         "end_at": "storage",
-        "with_oven": False,
         "with_saw": True,
         "with_PM": True,
-        "with_WH": True,
-        "color": "RED"
+        "color": "RED",
+    },
+    {
+        "name": "Line2w", 
+        "run": True,
+        "start_at": "storage",
+        "end_at": "end",
+        "color": "RED",
+        "start_when": "Line2s",
     },
     {
         "name": "Line3", 
         "run": True,
         "start_at": "start",
-        "end_at": "END",
-        "with_PM": False,
-        "color": "BLUE"
+        "end_at": "end",
+        "color": "BLUE",
     },
     {
-        "name": "Line4", 
+        "name": "Line4w", 
         "run": True,
         "start_at": "storage",
         "end_at": "END",
-        "color": "RED"
+        "color": "RED",
+        "end_int": True,
+    },
+    {
+        "name": "Line4s", 
+        "run": True,
+        "start_at": "start",
+        "end_at": "storage",
+        "with_oven": True,
+        "color": "RED",
+        "start_int": True,
+        "start_when": "Line4w",
     }
 ]
 

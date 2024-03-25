@@ -35,7 +35,7 @@ class MqttReceive():
             states (State): Possible States of line.
         '''
 
-        self.__BROKER_ADDR = "test.mosquitto.org"
+        # self.__BROKER_ADDR = "test.mosquitto.org"
 
         self.topic_start = f"MiniFactory/{factory_name}/Factory"
 
