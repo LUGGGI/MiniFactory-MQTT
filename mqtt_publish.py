@@ -27,9 +27,20 @@ line_configs1 = [
         "run": True,
         "start_at": "storage",
         "end_at": "end",
+        "with_mill": True,
+        "with_drill": True,
         "color": "WHITE",
         "start_when": "Line1s",
     },
+    # {
+    #     "name": "Test",
+    #     "run": True,
+    #     "start_at": "Cb1",
+    #     "with_PM": True,
+    #     "end_at": "CB3",
+    #     "color": "WHITE",
+    # },
+
 ]
 
 line_configs4 = [
@@ -46,6 +57,8 @@ line_configs4 = [
         "end_at": "end",
         "with_oven": True,
         "with_saw": True,
+        "with_mill": True,
+        "with_drill": True,
         "color": "WHITE",
     },
     {
@@ -77,6 +90,8 @@ line_configs4 = [
         "run": True,
         "start_at": "storage",
         "end_at": "END",
+        "with_mill": True,
+        "with_drill": True,
         "color": "RED",
         "end_int": True,
     },
