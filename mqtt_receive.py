@@ -8,7 +8,7 @@ __email__ = "st166506@stud.uni-stuttgart.de"
 __copyright__ = "Lukas Beck"
 
 __license__ = "GPL"
-__version__ = "2024.02.28"
+__version__ = "2024.04.04"
 
 import json
 import paho.mqtt.client as mqtt
@@ -70,10 +70,10 @@ class MqttReceive():
         self.log.debug(f"Connected to MQTT-Broker. Result code: {rc}")
 
         client.subscribe("MiniFactory/#")
-        # client.subscribe(f"{self.topic_start}/#")
-        # client.subscribe(f"{self.__topic_start}/+/Get")
-        # client.subscribe(f"{self.__topic_start}/+/Set")
-        # client.subscribe(f"{self.__topic_start}/+/Data")
+        # client.subscribe(f"{self.topic_start}/#") # only log messages from the factory defined in factory_name
+        # client.subscribe(f"{self.__topic_start}/+/Get") # log only get messages
+        # client.subscribe(f"{self.__topic_start}/+/Set") # log only set messages
+        # client.subscribe(f"{self.__topic_start}/+/Data") # log only data messages
         # client.subscribe("Debug")
         # client.subscribe("Status")
 
@@ -85,7 +85,9 @@ class MqttReceive():
             decoded_msg = msg.payload
 
         self.message_count += 1
-        self.log.info(f"{self.message_count}; {msg.topic.removeprefix(f'{self.topic_start}/')}; {decoded_msg}")
+        topic = msg.topic
+        # topic = topic.removeprefix(f'{self.topic_start}/') # uncomment to remove topic_start from log
+        self.log.info(f"{self.message_count}; {topic}; {decoded_msg}")
 
 
     def __on_disconnect(self, client, userdata, rc):
