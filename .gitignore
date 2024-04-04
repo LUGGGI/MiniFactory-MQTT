@@ -1,3 +1,4 @@
 *__pycache__
 
 mqtt*.log
+!mqtt0.log
